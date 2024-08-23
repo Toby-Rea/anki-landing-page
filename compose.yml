@@ -1,0 +1,5 @@
+services:
+  preview:
+    build: .
+    ports:
+      - "4173:4173"
