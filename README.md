@@ -28,4 +28,6 @@ make preview
 just preview
 ```
 
-Navigate the the provided URL.
+---
+
+Then navigate to the provided URL.
