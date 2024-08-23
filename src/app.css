@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Outfit Variable', sans-serif;
+  background-color: theme('colors.background');
+  color: theme('colors.foreground');
+}
