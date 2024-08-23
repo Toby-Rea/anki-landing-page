@@ -1,4 +1,4 @@
 preview:
 	bun install
 	bun run build
-	bun preview
+	bun run preview
