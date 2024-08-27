@@ -1,0 +1,6 @@
+{
+    "conventionalCommits.scopes": [
+        "Build Scripts",
+        "Grammar"
+    ]
+}
