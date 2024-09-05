@@ -17,7 +17,7 @@
           href="#downloads"
           on:click|preventDefault={() =>
             document.querySelector('#downloads')?.scrollIntoView({ behavior: 'smooth' })}
-          class="bg-primary aspect-[16/5] w-40 sm:w-56 px-3 lg:px-8 border-2 border-primary text-background flex justify-center items-center text-xl sm:text-2xl font-bold hover:opacity-80 transition-all duration-200"
+          class="bg-primary aspect-[16/5] w-40 md:w-56 px-3 lg:px-8 border-2 border-primary text-background flex justify-center items-center text-xl md:text-2xl font-bold hover:opacity-80 transition-all duration-200"
         >
           Download
         </a>
@@ -26,7 +26,7 @@
         href="https://docs.ankiweb.net/background.html"
         target="_blank"
         rel="noopener noreferrer"
-        class="aspect-[16/5] w-40 sm:w-56 px-3 lg:px-8 text-white border-2 border-white/[13%] flex justify-center items-center text-xl sm:text-2xl font-bold hover:opacity-60 transition-all duration-200"
+        class="aspect-[16/5] w-40 md:w-56 px-3 lg:px-8 text-white border-2 border-white/[13%] flex justify-center items-center text-xl md:text-2xl font-bold hover:opacity-60 transition-all duration-200"
       >
         + Learn more
       </a>
