@@ -47,7 +47,12 @@
     <span>
       {selected}
     </span>
-    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      class="size-4 md:size-6"
+      viewBox="0 0 25 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M19.5464 8.75L12.0464 16.25L4.54639 8.75"
         stroke="white"

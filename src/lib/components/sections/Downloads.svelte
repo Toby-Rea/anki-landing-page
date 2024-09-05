@@ -84,8 +84,11 @@
   <div class="flex flex-col w-full xl:flex-row gap-9">
     <div class="grow border-white/[13%] md:border-2 flex flex-col md:px-14 md:py-9 gap-8 md:gap-20">
       <div class="flex items-center justify-between gap-12">
-        <div class="flex flex-col gap-2">
-          <h2 class="text-2xl font-medium uppercase md:text-4xl">Desktop</h2>
+        <div class="flex flex-col gap-4 w-full">
+          <div class="flex justify-between items-center">
+            <h2 class="text-2xl font-medium uppercase md:text-4xl">Desktop</h2>
+            <Dropdown {options} bind:selected={qt_version} />
+          </div>
           <p class="text-lg md:text-2xl text-neutral">
             Qt6 is recommended for most users, the reasoning can be found <a
               href="https://docs.ankiweb.net/platform/windows/installing.html#qt5-vs-qt6"
@@ -97,7 +100,6 @@
             </a>
           </p>
         </div>
-        <Dropdown {options} bind:selected={qt_version} />
       </div>
       <div class="flex flex-col md:divide-y-2 divide-y divide-white/[13%]">
         {#each Object.entries(download_options.desktop) as [key, value]}
@@ -117,7 +119,7 @@
     <div
       class="xl:w-[45%] border-white/[13%] md:border-2 flex flex-col md:px-14 md:py-9 gap-8 md:gap-20"
     >
-      <div class="flex flex-col gap-2">
+      <div class="flex flex-col gap-4 w-full">
         <h2 class="text-2xl font-medium uppercase md:text-4xl">Mobile</h2>
         <p class="text-lg md:text-2xl text-neutral">
           AnkiMobile is the official iOS app and all purchases help to fund Anki's development.
