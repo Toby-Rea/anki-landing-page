@@ -5,8 +5,8 @@
 </script>
 
 <svelte:head>
-	<title>Anki - powerful, intelligent flashcards</title>
-  <link rel="icon" href="/logo.svg">
+  <title>Anki - powerful, intelligent flashcards</title>
+  <link rel="icon" href="/logo.svg" />
 </svelte:head>
 
 <Navigation />

@@ -1,6 +1,3 @@
 {
-    "conventionalCommits.scopes": [
-        "Build Scripts",
-        "Grammar"
-    ]
+  "conventionalCommits.scopes": ["Build Scripts", "Grammar"]
 }
