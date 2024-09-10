@@ -1,8 +1,14 @@
-<script>
+<script lang="ts">
   import DualHeader from '$lib/components/common/DualHeader.svelte';
 
-  let index = 0;
-  const testimonials = [
+  type Testimonial = {
+    quote: string;
+    author: string;
+  };
+
+  let index: number = 0;
+
+  const testimonials: Testimonial[] = [
     {
       quote:
         "... consistent use of Anki has opened more doors for me intellectually than I could have imagined two years ago. And being a poor student, I'll be forever grateful that you've provided this software open-source and free of charge.",
@@ -20,12 +26,8 @@
     },
   ];
 
-  function nextQuote() {
-    index = (index + 1) % testimonials.length;
-  }
-
-  function previousQuote() {
-    index = (index - 1 + testimonials.length) % testimonials.length;
+  function changeQuote(direction: number) {
+    index = (index + direction + testimonials.length) % testimonials.length;
   }
 
   // Calculate the required height of the quote container to display a consistent height and avoid
@@ -54,14 +56,12 @@
       "{testimonials[index].quote}"
     </p>
     <div class="flex items-center justify-between h-9">
-      <span class="pr-8 sm:text-xl text-neutral">
-        — {testimonials[index].author}
-      </span>
+      <span class="pr-8 sm:text-xl text-neutral">— {testimonials[index].author}</span>
       <div class="flex gap-6 lg:gap-14 min-w-fit">
-        <button on:click={previousQuote} class="hover:opacity-60">
+        <button on:click={() => changeQuote(-1)} class="hover:opacity-60">
           <img src="/icons/left-arrow.svg" alt="left-arrow" class="size-6 lg:size-9" />
         </button>
-        <button on:click={nextQuote} class="hover:opacity-60">
+        <button on:click={() => changeQuote(+1)} class="hover:opacity-60">
           <img src="/icons/right-arrow.svg" alt="right-arrow" class="size-6 lg:size-9" />
         </button>
       </div>
