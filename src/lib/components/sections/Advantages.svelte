@@ -6,6 +6,7 @@
     title: string;
     description: string;
     icon: string;
+    href?: string;
   };
 
   const advantages: Advantage[] = [
@@ -34,6 +35,7 @@
       title: 'add-ons',
       description: 'Install add-ons to extend Anki with new features and functionality.',
       icon: '/icons/add-ons.svg',
+      href: 'https://ankiweb.net/shared/addons'
     },
   ];
 </script>
@@ -43,9 +45,9 @@
     <p slot="subtitle">Here are a few reasons why users love Anki.</p>
   </DualHeader>
   <div class="grid xl:grid-cols-6 gap-9">
-    {#each advantages as { title, description, icon }, i}
+    {#each advantages as { title, description, icon, href }, i}
       <div class={i > 1 ? 'xl:col-span-2' : 'xl:col-span-3'}>
-        <AdvantageCard {title} {description} {icon} />
+        <AdvantageCard {title} {description} {icon} {href} />
       </div>
     {/each}
   </div>
