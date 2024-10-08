@@ -69,7 +69,7 @@
 
 {#if show}
   <div
-    class="fixed flex flex-col gap-8 items-center justify-center w-screen h-screen top-0 left-0 z-[999] bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/90"
+    class="fixed flex flex-col gap-4 items-center justify-center w-screen h-screen top-0 left-0 z-[999] bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/90"
     role="navigation"
     transition:fade={{ delay: 0, duration: 250 }}
   >
@@ -77,7 +77,7 @@
       <a
         {href}
         on:click|preventDefault={() => handleSelect(href)}
-        class="text-3xl font-semibold hover:opacity-80 uppercase flex items-center gap-4"
+        class="text-3xl font-semibold hover:text-primary hover:opacity-80 focus:text-primary focus:opacity-80 uppercase flex items-center gap-4 p-3"
       >
         <span>{text}</span>
         {#if external}
