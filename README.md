@@ -1,33 +1,11 @@
 # Anki Landing Page Refresh
 
-To build and view locally:
+## Developing
 
-```sh
-npm install
-npm run build
-npm run preview
-```
+1. Run `make dev`
+2. Navigate to <http://localhost:5173>
 
-## Or if you are living in 2024
+## Previewing
 
-```sh
-bun install
-bun run build
-bun run preview
-```
-
-## Alternatively you can just do:
-
-```sh
-make preview
-```
-
-### Or
-
-```sh
-just preview
-```
-
----
-
-Then navigate to the provided URL.
+1. Run `make preview`
+2. Navigate to <http://localhost:4173>
