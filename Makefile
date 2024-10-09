@@ -11,4 +11,4 @@ dev:
 	@$(PM) install && $(PM) run dev
 
 preview:
-	@$(PM) install && $(PM) run preview
+	@$(PM) install && $(PM) run build && $(PM) run preview
