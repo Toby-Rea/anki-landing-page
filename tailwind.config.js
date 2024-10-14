@@ -4,6 +4,9 @@ export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Outfit Variable', 'sans-serif'],
+      },
       colors: {
         background: '#0F0F15',
         foreground: '#FFFFFF',

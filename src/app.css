@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: 'Outfit Variable', sans-serif;
-  background-color: theme('colors.background');
-  color: theme('colors.foreground');
+@layer base {
+  body {
+    @apply font-sans bg-background text-foreground;
+  }
 }
