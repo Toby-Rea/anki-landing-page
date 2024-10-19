@@ -1,7 +1,8 @@
 {
-    "conventionalCommits.scopes": [
-        "Build Scripts",
-        "Grammar",
-        "Docker"
-    ]
+  "conventionalCommits.scopes": [
+    "Build Scripts",
+    "Grammar",
+    "Docker",
+    "Documentation"
+  ]
 }

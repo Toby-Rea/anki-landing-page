@@ -1,6 +1,6 @@
 # Anki Landing Page Refresh
 
-## To run a preview in a docker container. 
+## To run a preview in a docker container
 
 **Note**: this requires docker and docker compose to be installed.
 
@@ -8,40 +8,17 @@
 docker compose up
 ```
 
-Then go to <http:localhost:4173>.
+Then navigate to <http:localhost:4173>.
 
+## Developing
 
-## To build and view locally:
+1. Run `make dev`
+2. Navigate to <http://localhost:5173>
 
-```sh
-npm install
-npm run build
-npm run preview
-```
+## Previewing
 
-### Or if you are living in 2024
-
-```sh
-bun install
-bun run build
-bun run preview
-```
-
-### Alternatively you can just do:
-
-```sh
-make preview
-```
-
-#### Or
-
-```sh
-just preview
-```
-
----
-
-Then navigate to the provided URL.
+1. Run `make preview`
+2. Navigate to <http://localhost:4173>
 
 ## Screenshot
 
