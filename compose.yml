@@ -1,5 +1,6 @@
 services:
   preview:
     build: .
+    command: make preview
     ports:
       - "4173:4173"
