@@ -7,7 +7,7 @@
 <a {href} target="_blank" rel="noopener noreferrer" class="card group">
   <div class="flex items-start justify-between">
     <h2 class="text-2xl sm:text-3xl uppercase font-medium group-hover:text-background">
-      {title}
+      {title}&nbsp;&nbsp;&nbsp;<span class="font-bold text-3xl">↗</span>
     </h2>
   </div>
   <p class="text-neutral text-md group-hover:text-background group-hover:font-medium">
