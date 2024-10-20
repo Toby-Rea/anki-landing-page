@@ -12,7 +12,7 @@
     {
       title: 'open source',
       description:
-        'If you know how to code you could help to maintain or develop new add-ons or features for Anki.',
+        'If you know how to code you could help maintain Anki or create new add-ons/features.',
       href: 'https://github.com/ankitects/anki/blob/main/docs/contributing.md',
     },
     {
@@ -37,7 +37,9 @@
       experience.
     </p>
   </DualHeader>
-  <div class="grid gap-9 lg:grid-cols-3">
+  <div
+    class="grid grid-cols-2 md:grid-cols-3 border-2 md:divide-x-2 divide-white/[13%] border-white/[13%] md:aspect-[7]"
+  >
     {#each contributingCards as { title, description, href }}
       <LinkCard {title} {description} {href} />
     {/each}
