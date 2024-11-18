@@ -1,7 +1,11 @@
 <script lang="ts">
-  export let icon: string;
-  export let href: string;
-  export let text: string;
+  type DownloadLink = {
+    icon: string;
+    href: string;
+    text: string;
+  };
+
+  let { icon, href, text }: DownloadLink = $props();
 </script>
 
 <div>

@@ -8,8 +8,8 @@
     external?: boolean;
   };
 
-  let show: boolean = false;
-  let options: MenuOption[] = [
+  let show: boolean = $state(false);
+  const options: MenuOption[] = [
     { text: 'Home', href: '#' },
     { text: 'Advantages', href: '#advantages' },
     { text: 'Testimonials', href: '#testimonials' },
@@ -57,7 +57,7 @@
   <div class="flex items-center justify-between h-full max-w-[1624px] mx-auto px-8">
     <Logo />
     <button
-      on:click={() => toggleMenu()}
+      onclick={() => toggleMenu()}
       aria-expanded={show}
       aria-controls="dropdown-menu"
       class="focus:shadow-solid flex items-center justify-center gap-5 capitalize hover:opacity-60"
@@ -76,7 +76,10 @@
     {#each options as { text, href, external }}
       <a
         {href}
-        on:click|preventDefault={() => handleSelect(href)}
+        onclick={(event) => {
+          event.preventDefault();
+          () => handleSelect(href);
+        }}
         class="text-3xl font-semibold hover:text-primary hover:opacity-80 focus:text-primary focus:opacity-80 uppercase flex items-center gap-4 p-3"
       >
         <span>{text}</span>
