@@ -2,7 +2,7 @@
   type DualHeader = {
     title: string;
     subtitle: any;
-  }
+  };
 
   let { title, subtitle }: DualHeader = $props();
 
