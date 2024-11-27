@@ -78,7 +78,7 @@
         {href}
         onclick={(event) => {
           event.preventDefault();
-          () => handleSelect(href);
+          handleSelect(href);
         }}
         class="text-3xl font-semibold hover:text-primary hover:opacity-80 focus:text-primary focus:opacity-80 uppercase flex items-center gap-4 p-3"
       >
