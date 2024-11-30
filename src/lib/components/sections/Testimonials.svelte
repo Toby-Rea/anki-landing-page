@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths';
   import DualHeader from '$lib/components/common/DualHeader.svelte';
 
   type Testimonial = {
@@ -59,10 +60,10 @@
       <span class="pr-8 sm:text-xl text-neutral">— {testimonials[index].author}</span>
       <div class="flex gap-6 lg:gap-14 min-w-fit">
         <button on:click={() => changeQuote(-1)} class="hover:opacity-60">
-          <img src="/icons/left-arrow.svg" alt="left-arrow" class="size-6 lg:size-9" />
+          <img src="{base}/icons/left-arrow.svg" alt="left-arrow" class="size-6 lg:size-9" />
         </button>
         <button on:click={() => changeQuote(+1)} class="hover:opacity-60">
-          <img src="/icons/right-arrow.svg" alt="right-arrow" class="size-6 lg:size-9" />
+          <img src="{base}/icons/right-arrow.svg" alt="right-arrow" class="size-6 lg:size-9" />
         </button>
       </div>
     </div>

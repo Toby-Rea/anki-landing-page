@@ -1,6 +1,7 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
   import Logo from '$lib/components/core/Logo.svelte';
+  import { base } from '$app/paths';
 
   type MenuOption = {
     href: string;
@@ -62,7 +63,7 @@
       aria-controls="dropdown-menu"
       class="focus:shadow-solid flex items-center justify-center gap-5 capitalize hover:opacity-60"
     >
-      <img src="/icons/menu-bars.svg" alt="menu" class="size-10" />
+      <img src="{base}/icons/menu-bars.svg" alt="menu" class="size-10" />
     </button>
   </div>
 </header>
@@ -81,7 +82,7 @@
       >
         <span>{text}</span>
         {#if external}
-          <img src="/icons/link-arrow.svg" alt="outlink" class="size-6" />
+          <img src="{base}/icons/link-arrow.svg" alt="outlink" class="size-6" />
         {/if}
       </a>
     {/each}
