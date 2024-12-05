@@ -1,7 +1,12 @@
 <script lang="ts">
-  export let title: string;
+  type DualHeader = {
+    title: string;
+    subtitle: any;
+  };
 
-  $: id = title.toLowerCase().replace(/\s/g, '-');
+  let { title, subtitle }: DualHeader = $props();
+
+  const id = $derived(title.toLowerCase().replace(/\s/g, '-'));
 </script>
 
 <hgroup class="flex flex-col gap-3">
@@ -9,6 +14,6 @@
     {title}
   </h2>
   <div class="text-xl xl:text-4xl xl:tracking-[1.02px] xl:leading-[45px] text-neutral">
-    <slot name="subtitle" />
+    {@render subtitle()}
   </div>
 </hgroup>

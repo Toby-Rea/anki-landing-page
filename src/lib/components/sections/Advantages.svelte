@@ -40,7 +40,9 @@
 
 <section class="flex flex-col justify-center w-full py-5 sm:py-9 gap-14 xl:gap-20">
   <DualHeader title="advantages">
-    <p slot="subtitle">Here are a few reasons why users love Anki.</p>
+    {#snippet subtitle()}
+      <p>Here are a few reasons why users love Anki.</p>
+    {/snippet}
   </DualHeader>
   <div class="grid xl:grid-cols-6 gap-9">
     {#each advantages as { title, description, icon }, i}

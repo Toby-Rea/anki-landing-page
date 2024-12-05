@@ -6,7 +6,7 @@
     author: string;
   };
 
-  let index: number = 0;
+  let index: number = $state(0);
 
   const testimonials: Testimonial[] = [
     {
@@ -32,14 +32,16 @@
 
   // Calculate the required height of the quote container to display a consistent height and avoid
   // layout shifts when cycling through testimomials with inconsistent lengths.
-  let innerWidth = 0;
-  $: lineHeight = innerWidth >= 1024 ? 40 : 28;
-  $: averageCharsPerLine = Math.ceil(innerWidth * (innerWidth >= 1024 ? 0.05 : 0.06));
-  $: maxHeight = Math.max(
-    ...testimonials.map((testimonial) => {
-      const lines = Math.ceil(testimonial.quote.length / averageCharsPerLine);
-      return lines * lineHeight;
-    }),
+  let innerWidth = $state(0);
+  const lineHeight = $derived(innerWidth >= 1024 ? 40 : 28);
+  const averageCharsPerLine = $derived(Math.ceil(innerWidth * (innerWidth >= 1024 ? 0.05 : 0.06)));
+  const maxHeight = $derived(
+    Math.max(
+      ...testimonials.map((testimonial) => {
+        const lines = Math.ceil(testimonial.quote.length / averageCharsPerLine);
+        return lines * lineHeight;
+      }),
+    ),
   );
 </script>
 
@@ -47,7 +49,9 @@
 
 <section class="flex flex-col justify-center w-full py-5 sm:py-9 gap-14 xl:gap-20">
   <DualHeader title="testimonials">
-    <p slot="subtitle">See what people are saying about Anki.</p>
+    {#snippet subtitle()}
+      <p>See what people are saying about Anki.</p>
+    {/snippet}
   </DualHeader>
   <div
     class="md:py-24 md:px-14 gap-6 lg:gap-20 flex flex-col justify-between md:border-y-2 border-white/[13%]"
@@ -58,10 +62,10 @@
     <div class="flex items-center justify-between h-9">
       <span class="pr-8 sm:text-xl text-neutral">— {testimonials[index].author}</span>
       <div class="flex gap-6 lg:gap-14 min-w-fit">
-        <button on:click={() => changeQuote(-1)} class="hover:opacity-60">
+        <button onclick={() => changeQuote(-1)} class="hover:opacity-60">
           <img src="/icons/left-arrow.svg" alt="left-arrow" class="size-6 lg:size-9" />
         </button>
-        <button on:click={() => changeQuote(+1)} class="hover:opacity-60">
+        <button onclick={() => changeQuote(+1)} class="hover:opacity-60">
           <img src="/icons/right-arrow.svg" alt="right-arrow" class="size-6 lg:size-9" />
         </button>
       </div>

@@ -3,20 +3,20 @@
   import DownloadLink from '../common/DownloadLink.svelte';
   import Dropdown from '../common/Dropdown.svelte';
 
-  enum QtOptions {
-    Qt6 = 'qt6',
-    Qt5 = 'qt5',
-  }
+  const QtOptions = {
+    Qt6: 'qt6',
+    Qt5: 'qt5',
+  };
 
   const options: string[] = Object.values(QtOptions);
-  let qt_version: string = QtOptions.Qt6;
-  let anki_version: string = '24.06.3';
+  let qt_version: string = $state(QtOptions.Qt6);
+  const anki_version: string = '24.06.3';
 
   function buildDownloadURL(platform: string, extension: string): string {
     return `https://github.com/ankitects/anki/releases/download/${anki_version}/anki-${anki_version}-${platform}-${qt_version}.${extension}`;
   }
 
-  $: download_options = {
+  const download_options = $derived({
     desktop: {
       Windows: [
         {
@@ -65,21 +65,23 @@
         },
       ],
     },
-  };
+  });
 </script>
 
 <section class="flex flex-col justify-center w-full py-5 sm:py-9 gap-14">
   <DualHeader title="downloads">
-    <p slot="subtitle">
-      Choose the correct download for your platform. Installation guides can be found <a
-        href="https://docs.ankiweb.net/getting-started.html#installing--upgrading"
-        class="text-primary hover:opacity-80"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        here
-      </a>
-    </p>
+    {#snippet subtitle()}
+      <p>
+        Choose the correct download for your platform. Installation guides can be found <a
+          href="https://docs.ankiweb.net/getting-started.html#installing--upgrading"
+          class="text-primary hover:opacity-80"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          here
+        </a>
+      </p>
+    {/snippet}
   </DualHeader>
   <div class="flex flex-col w-full xl:flex-row gap-9">
     <div class="grow border-white/[13%] md:border-2 flex flex-col md:px-14 md:py-9 gap-8 md:gap-20">

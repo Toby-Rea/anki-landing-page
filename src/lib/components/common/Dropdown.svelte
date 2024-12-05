@@ -2,11 +2,13 @@
   import { onMount } from 'svelte';
   import { scale } from 'svelte/transition';
 
-  export let selected: string;
-  export let options: string[];
-
-  let show: boolean = false;
-  let menu: HTMLDivElement | null = null;
+  type Dropdown = {
+    selected: string;
+    options: string[];
+  };
+  let { selected = $bindable(), options }: Dropdown = $props();
+  let show: boolean = $state(false);
+  let menu: HTMLDivElement | null = $state(null);
 
   function handleSelect(option: string) {
     selected = option;
@@ -38,7 +40,7 @@
 
 <div class="relative w-fit" bind:this={menu}>
   <button
-    on:click={() => (show = !show)}
+    onclick={() => (show = !show)}
     aria-expanded={show}
     aria-controls="dropdown-menu"
     class="lg:w-44 bg-background focus:outline-none focus:shadow-solid border-2 border-white/[13%] text-white font-medium lg:text-2xl px-5 py-2.5 flex items-center justify-center gap-5 capitalize hover:opacity-80"
@@ -73,7 +75,7 @@
       {#each options as option}
         <button
           role="menuitem"
-          on:click={() => handleSelect(option)}
+          onclick={() => handleSelect(option)}
           class="lg:text-xl py-2.5 hover:opacity-80 hover:bg-white/[3%] capitalize font-medium"
           class:text-primary={option === selected}
         >
