@@ -1,7 +1,11 @@
 <script lang="ts">
-  export let title: string;
-  export let description: string;
-  export let href: string;
+  type LinkCard = {
+    title: string;
+    description: string;
+    href: string;
+  };
+
+  let { title, description, href }: LinkCard = $props();
 </script>
 
 <a {href} target="_blank" rel="noopener noreferrer" class="card group">

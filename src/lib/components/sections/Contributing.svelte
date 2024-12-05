@@ -32,10 +32,12 @@
 
 <section class="flex flex-col justify-center w-full py-5 sm:py-9 gap-14 xl:gap-20">
   <DualHeader title="contributing">
-    <p slot="subtitle">
-      Anki is a community project where anyone can make contributions to help improve everyone's
-      experience.
-    </p>
+    {#snippet subtitle()}
+      <p>
+        Anki is a community project where anyone can make contributions to help improve everyone's
+        experience.
+      </p>
+    {/snippet}
   </DualHeader>
   <div
     class="grid grid-cols-2 md:grid-cols-3 border-2 md:divide-x-2 divide-white/[13%] border-white/[13%] md:aspect-[7]"

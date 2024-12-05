@@ -5,7 +5,9 @@
 
 <section class="flex flex-col justify-center w-full py-5 sm:py-9 gap-14 xl:gap-20">
   <DualHeader title="basic concepts">
-    <p slot="subtitle">Anki supports complex workflows, but getting started is easy.</p>
+    {#snippet subtitle()}
+      <p>Anki supports complex workflows, but getting started is easy.</p>
+    {/snippet}
   </DualHeader>
   <div class="flex flex-col items-center gap-6 md:gap-20 md:flex-row">
     <img

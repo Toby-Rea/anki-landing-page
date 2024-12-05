@@ -1,9 +1,13 @@
 <script lang="ts">
   import { base } from "$app/paths";
 
-  export let icon: string;
-  export let href: string;
-  export let text: string;
+  type DownloadLink = {
+    icon: string;
+    href: string;
+    text: string;
+  };
+
+  let { icon, href, text }: DownloadLink = $props();
 </script>
 
 <div>
