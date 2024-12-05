@@ -1,19 +1,22 @@
 <script lang="ts">
   import DualHeader from '$lib/components/common/DualHeader.svelte';
-  import DownloadLink from '../common/DownloadLink.svelte';
-  import Dropdown from '../common/Dropdown.svelte';
+  import DownloadLink from '$lib/components/common/DownloadLink.svelte';
+  import Dropdown from '$lib/components/common/Dropdown.svelte';
 
   const QtOptions = {
     Qt6: 'qt6',
     Qt5: 'qt5',
   };
 
-  const options: string[] = Object.values(QtOptions);
-  let qt_version: string = $state(QtOptions.Qt6);
+  const options = [
+    { label: 'Qt6', value: QtOptions.Qt6 },
+    { label: 'Qt5', value: QtOptions.Qt5 },
+  ];
+  let qt_version = $state(options[0]);
   const anki_version: string = '24.06.3';
 
   function buildDownloadURL(platform: string, extension: string): string {
-    return `https://github.com/ankitects/anki/releases/download/${anki_version}/anki-${anki_version}-${platform}-${qt_version}.${extension}`;
+    return `https://github.com/ankitects/anki/releases/download/${anki_version}/anki-${anki_version}-${platform}-${qt_version.value}.${extension}`;
   }
 
   const download_options = $derived({
@@ -21,7 +24,7 @@
       Windows: [
         {
           href: buildDownloadURL('windows', 'exe'),
-          text: `Anki ${anki_version} ${qt_version}`,
+          text: `Anki ${anki_version} ${qt_version.value}`,
           icon: '/icons/download.svg',
           supportsQt5: true,
         },
@@ -29,13 +32,13 @@
       MacOS: [
         {
           href: buildDownloadURL('mac-apple', 'dmg'),
-          text: `Apple Silicon ${anki_version} ${qt_version}`,
+          text: `Apple Silicon ${anki_version} ${qt_version.value}`,
           icon: '/icons/download.svg',
           supportsQt5: false,
         },
         {
           href: buildDownloadURL('mac-intel', 'dmg'),
-          text: `Apple Intel ${anki_version} ${qt_version}`,
+          text: `Apple Intel ${anki_version} ${qt_version.value}`,
           icon: '/icons/download.svg',
           supportsQt5: true,
         },
@@ -43,7 +46,7 @@
       Linux: [
         {
           href: buildDownloadURL('linux', 'tar.zst'),
-          text: `Anki ${anki_version} ${qt_version}`,
+          text: `Anki ${anki_version} ${qt_version.value}`,
           icon: '/icons/download.svg',
           supportsQt5: true,
         },
@@ -109,7 +112,7 @@
             <h2 class="text-xl font-medium md:text-3xl">{key}</h2>
             <div class="flex flex-col items-end gap-3">
               {#each value as { href, text, icon, supportsQt5 }}
-                {#if supportsQt5 || qt_version === QtOptions.Qt6}
+                {#if supportsQt5 || qt_version.value === QtOptions.Qt6}
                   <DownloadLink {href} {text} {icon} />
                 {/if}
               {/each}
