@@ -12,6 +12,10 @@
 <svelte:head>
   <title>Anki - powerful, intelligent flashcards</title>
   <link rel="icon" href="/logo.svg" />
+  <meta
+    name="description"
+    content="Anki - a program which makes remembering things easy."
+  />
 </svelte:head>
 
 <Navigation />

@@ -26,6 +26,7 @@
       </div>
       <a
         href="https://docs.ankiweb.net/background.html"
+        aria-label="Anki Manual Background"
         target="_blank"
         rel="noopener noreferrer"
         class="aspect-[16/5] w-40 md:w-56 px-3 lg:px-8 text-white border-2 border-white/[13%] flex justify-center items-center text-xl md:text-2xl font-bold hover:opacity-60 transition-all duration-200"
