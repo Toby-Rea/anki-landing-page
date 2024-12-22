@@ -72,14 +72,14 @@
   <DualHeader title="downloads">
     {#snippet subtitle()}
       <p>
-        Choose the correct download for your platform. Installation guides can be found <a
+        Choose the correct download for your platform. Here are the <a
           href="https://docs.ankiweb.net/getting-started.html#installing--upgrading"
           aria-label="Anki Manual: Installing and Upgrading"
           class="text-primary hover:opacity-80"
           target="_blank"
           rel="noopener noreferrer"
         >
-          here
+          installation guides
         </a>
       </p>
     {/snippet}
@@ -93,14 +93,14 @@
             <Dropdown {options} bind:selected={qt_version} />
           </div>
           <p class="text-lg md:text-2xl text-neutral">
-            Qt6 is recommended for most users, the reasoning can be found <a
+            Qt6 is recommended for most users, here are the <a
               href="https://docs.ankiweb.net/platform/windows/installing.html#qt5-vs-qt6"
               aria-label="Anki Manual: Installing and Upgrading Anki on Windows"
               class="text-primary hover:opacity-80"
               target="_blank"
               rel="noopener noreferrer"
             >
-              here
+              reasons
             </a>
           </p>
         </div>
