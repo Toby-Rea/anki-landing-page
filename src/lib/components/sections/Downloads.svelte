@@ -72,7 +72,7 @@
   <DualHeader title="downloads">
     {#snippet subtitle()}
       <p>
-        Choose the correct download for your platform. Here are the <a
+        Choose the correct download for your platform. For details, see <a
           href="https://docs.ankiweb.net/getting-started.html#installing--upgrading"
           aria-label="Anki Manual: Installing and Upgrading"
           class="text-primary hover:opacity-80"
