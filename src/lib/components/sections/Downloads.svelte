@@ -75,8 +75,8 @@
       </p>
     {/snippet}
   </DualHeader>
-  <div class="flex flex-col w-full xl:flex-row gap-9">
-    <div class="grow border-white/[13%] md:border-2 flex flex-col md:px-14 md:py-9 gap-8 md:gap-20">
+  <div class="grid xl:grid-cols-5 w-full xl:flex-row gap-9">
+    <div class="xl:col-span-3 border-white/[13%] md:border-2 flex flex-col md:px-14 md:py-9 gap-8 md:gap-20">
       <div class="flex items-center justify-between gap-12">
         <div class="flex flex-col gap-4 w-full">
           <div class="flex justify-between items-center">
@@ -102,7 +102,7 @@
       </div>
     </div>
     <div
-      class="xl:w-[45%] border-white/[13%] md:border-2 flex flex-col md:px-14 md:py-9 gap-8 md:gap-20"
+      class="xl:col-span-2 border-white/[13%] md:border-2 flex flex-col md:px-14 md:py-9 gap-8 md:gap-20"
     >
       <div class="flex flex-col gap-4 w-full">
         <h2 class="text-2xl font-medium uppercase md:text-4xl">Mobile</h2>
