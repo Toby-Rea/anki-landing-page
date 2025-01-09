@@ -1,19 +1,11 @@
 <script lang="ts">
   import DualHeader from '$lib/components/common/DualHeader.svelte';
-  import DownloadLink from '../common/DownloadLink.svelte';
-  import Dropdown from '../common/Dropdown.svelte';
+  import DownloadLink from '$lib/components/common/DownloadLink.svelte';
 
-  const QtOptions = {
-    Qt6: 'qt6',
-    Qt5: 'qt5',
-  };
-
-  const options: string[] = Object.values(QtOptions);
-  let qt_version: string = $state(QtOptions.Qt6);
-  const anki_version: string = '24.06.3';
+  const anki_version: string = '24.11';
 
   function buildDownloadURL(platform: string, extension: string): string {
-    return `https://github.com/ankitects/anki/releases/download/${anki_version}/anki-${anki_version}-${platform}-${qt_version}.${extension}`;
+    return `https://github.com/ankitects/anki/releases/download/${anki_version}/anki-${anki_version}-${platform}-qt6.${extension}`;
   }
 
   const download_options = $derived({
@@ -21,7 +13,7 @@
       Windows: [
         {
           href: buildDownloadURL('windows', 'exe'),
-          text: `Anki ${anki_version} ${qt_version}`,
+          text: `Anki ${anki_version}`,
           icon: '/icons/download.svg',
           supportsQt5: true,
         },
@@ -29,13 +21,13 @@
       MacOS: [
         {
           href: buildDownloadURL('mac-apple', 'dmg'),
-          text: `Apple Silicon ${anki_version} ${qt_version}`,
+          text: `Apple Silicon ${anki_version}`,
           icon: '/icons/download.svg',
           supportsQt5: false,
         },
         {
           href: buildDownloadURL('mac-intel', 'dmg'),
-          text: `Apple Intel ${anki_version} ${qt_version}`,
+          text: `Apple Intel ${anki_version}`,
           icon: '/icons/download.svg',
           supportsQt5: true,
         },
@@ -43,7 +35,7 @@
       Linux: [
         {
           href: buildDownloadURL('linux', 'tar.zst'),
-          text: `Anki ${anki_version} ${qt_version}`,
+          text: `Anki ${anki_version}`,
           icon: '/icons/download.svg',
           supportsQt5: true,
         },
@@ -84,24 +76,16 @@
       </p>
     {/snippet}
   </DualHeader>
-  <div class="flex flex-col w-full xl:flex-row gap-9">
-    <div class="grow border-white/[13%] md:border-2 flex flex-col md:px-14 md:py-9 gap-8 md:gap-20">
+  <div class="grid xl:grid-cols-5 w-full xl:flex-row gap-9">
+    <div class="xl:col-span-3 border-white/[13%] md:border-2 flex flex-col md:px-14 md:py-9 gap-8 md:gap-20">
       <div class="flex items-center justify-between gap-12">
         <div class="flex flex-col gap-4 w-full">
           <div class="flex justify-between items-center">
             <h2 class="text-2xl font-medium uppercase md:text-4xl">Desktop</h2>
-            <Dropdown {options} bind:selected={qt_version} />
           </div>
           <p class="text-lg md:text-2xl text-neutral">
-            Qt6 is recommended for most users, here are the <a
-              href="https://docs.ankiweb.net/platform/windows/installing.html#qt5-vs-qt6"
-              aria-label="Anki Manual: Installing and Upgrading Anki on Windows"
-              class="text-primary hover:opacity-80"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              reasons
-            </a>
+            If you have a recent Mac, pick the Apple Silicon version for better performance/battery
+            life. Older Macs will need to use the Intel version instead.
           </p>
         </div>
       </div>
@@ -110,10 +94,8 @@
           <div class="flex justify-between py-5 md:px-5">
             <h2 class="text-xl font-medium md:text-3xl">{key}</h2>
             <div class="flex flex-col items-end gap-3">
-              {#each value as { href, text, icon, supportsQt5 }}
-                {#if supportsQt5 || qt_version === QtOptions.Qt6}
-                  <DownloadLink {href} {text} {icon} />
-                {/if}
+              {#each value as { href, text, icon }}
+                <DownloadLink {href} {text} {icon} />
               {/each}
             </div>
           </div>
@@ -121,7 +103,7 @@
       </div>
     </div>
     <div
-      class="xl:w-[45%] border-white/[13%] md:border-2 flex flex-col md:px-14 md:py-9 gap-8 md:gap-20"
+      class="xl:col-span-2 border-white/[13%] md:border-2 flex flex-col md:px-14 md:py-9 gap-8 md:gap-20"
     >
       <div class="flex flex-col gap-4 w-full">
         <h2 class="text-2xl font-medium uppercase md:text-4xl">Mobile</h2>
