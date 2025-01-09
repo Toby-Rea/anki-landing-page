@@ -1,22 +1,11 @@
 <script lang="ts">
   import DualHeader from '$lib/components/common/DualHeader.svelte';
   import DownloadLink from '$lib/components/common/DownloadLink.svelte';
-  import Dropdown from '$lib/components/common/Dropdown.svelte';
 
-  const QtOptions = {
-    Qt6: 'qt6',
-    Qt5: 'qt5',
-  };
-
-  const options = [
-    { label: 'Qt6', value: QtOptions.Qt6 },
-    { label: 'Qt5', value: QtOptions.Qt5 },
-  ];
-  let qt_version = $state(options[0]);
-  const anki_version: string = '24.06.3';
+  const anki_version: string = '24.11';
 
   function buildDownloadURL(platform: string, extension: string): string {
-    return `https://github.com/ankitects/anki/releases/download/${anki_version}/anki-${anki_version}-${platform}-${qt_version.value}.${extension}`;
+    return `https://github.com/ankitects/anki/releases/download/${anki_version}/anki-${anki_version}-${platform}-qt6.${extension}`;
   }
 
   const download_options = $derived({
@@ -24,7 +13,7 @@
       Windows: [
         {
           href: buildDownloadURL('windows', 'exe'),
-          text: `Anki ${anki_version} ${qt_version.value}`,
+          text: `Anki ${anki_version}`,
           icon: '/icons/download.svg',
           supportsQt5: true,
         },
@@ -32,13 +21,13 @@
       MacOS: [
         {
           href: buildDownloadURL('mac-apple', 'dmg'),
-          text: `Apple Silicon ${anki_version} ${qt_version.value}`,
+          text: `Apple Silicon ${anki_version}`,
           icon: '/icons/download.svg',
           supportsQt5: false,
         },
         {
           href: buildDownloadURL('mac-intel', 'dmg'),
-          text: `Apple Intel ${anki_version} ${qt_version.value}`,
+          text: `Apple Intel ${anki_version}`,
           icon: '/icons/download.svg',
           supportsQt5: true,
         },
@@ -46,7 +35,7 @@
       Linux: [
         {
           href: buildDownloadURL('linux', 'tar.zst'),
-          text: `Anki ${anki_version} ${qt_version.value}`,
+          text: `Anki ${anki_version}`,
           icon: '/icons/download.svg',
           supportsQt5: true,
         },
@@ -92,17 +81,10 @@
         <div class="flex flex-col gap-4 w-full">
           <div class="flex justify-between items-center">
             <h2 class="text-2xl font-medium uppercase md:text-4xl">Desktop</h2>
-            <Dropdown {options} bind:selected={qt_version} />
           </div>
           <p class="text-lg md:text-2xl text-neutral">
-            Qt6 is recommended for most users, the reasoning can be found <a
-              href="https://docs.ankiweb.net/platform/windows/installing.html#qt5-vs-qt6"
-              class="text-primary hover:opacity-80"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              here
-            </a>
+            If you have a recent Mac, pick the Apple Silicon version for better performance/battery
+            life. Older Macs will need to use the Intel version instead.
           </p>
         </div>
       </div>
@@ -111,10 +93,8 @@
           <div class="flex justify-between py-5 md:px-5">
             <h2 class="text-xl font-medium md:text-3xl">{key}</h2>
             <div class="flex flex-col items-end gap-3">
-              {#each value as { href, text, icon, supportsQt5 }}
-                {#if supportsQt5 || qt_version.value === QtOptions.Qt6}
-                  <DownloadLink {href} {text} {icon} />
-                {/if}
+              {#each value as { href, text, icon }}
+                <DownloadLink {href} {text} {icon} />
               {/each}
             </div>
           </div>
