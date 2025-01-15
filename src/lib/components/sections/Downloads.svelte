@@ -64,13 +64,14 @@
   <DualHeader title="downloads">
     {#snippet subtitle()}
       <p>
-        Choose the correct download for your platform. Installation guides can be found <a
+        Choose the correct download for your platform. For details, see <a
           href="https://docs.ankiweb.net/getting-started.html#installing--upgrading"
+          aria-label="Anki Manual: Installing and Upgrading"
           class="text-primary hover:opacity-80"
           target="_blank"
           rel="noopener noreferrer"
         >
-          here
+          installation guides
         </a>
       </p>
     {/snippet}
