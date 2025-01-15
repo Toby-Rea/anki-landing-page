@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths';
   import DualHeader from '$lib/components/common/DualHeader.svelte';
 </script>
 
@@ -10,7 +11,7 @@
   </DualHeader>
   <div class="flex flex-col items-center gap-6 md:gap-20 md:flex-row">
     <img
-      src="/graphics/deck-graphic.svg"
+      src="{base}/graphics/deck-graphic.svg"
       alt="deck-graphic"
       class="aspect-[16/10] grow max-w-[90%] md:max-w-[40%]"
     />
@@ -24,7 +25,7 @@
   </div>
   <div class="flex flex-col items-center gap-6 md:gap-20 md:flex-row-reverse">
     <img
-      src="/graphics/review-graphic.svg"
+      src="{base}/graphics/review-graphic.svg"
       alt="deck-graphic"
       class="aspect-[16/10] grow max-w-[90%] md:max-w-[40%]"
     />
