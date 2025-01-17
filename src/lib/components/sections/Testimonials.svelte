@@ -12,18 +12,18 @@
   const testimonials: Testimonial[] = [
     {
       quote:
-        "... consistent use of Anki has opened more doors for me intellectually than I could have imagined two years ago. And being a poor student, I'll be forever grateful that you've provided this software open-source and free of charge.",
-      author: 'keldin, via Email',
+        'The single biggest change that Anki brings about is that it means memory is no longer a haphazard event, to be left to chance. Rather, it guarantees I will remember something, with minimal effort. That is, Anki makes memory a choice.',
+      author: 'Michael A. Nielsen, "Augmenting Long-term Memory"',
     },
     {
       quote:
-        'No other application [...] comes remotely close to Anki in terms of the number and power of features, flexibility in study, or implementation of spaced repetition.',
+      'No other application [...] comes remotely close to Anki in terms of the number and power of features, flexibility in study, or implementation of spaced repetition.',
       author: 'K. M. Lawson, "Anki All The Way"',
     },
     {
       quote:
-        'The single biggest change that Anki brings about is that it means memory is no longer a haphazard event, to be left to chance. Rather, it guarantees I will remember something, with minimal effort. That is, Anki makes memory a choice.',
-      author: 'Michael A. Nielsen, "Augmenting Long-term Memory"',
+        "... consistent use of Anki has opened more doors for me intellectually than I could have imagined two years ago. And being a poor student, I'll be forever grateful that you've provided this software open-source and free of charge.",
+      author: 'keldin, via Email',
     },
   ];
 
