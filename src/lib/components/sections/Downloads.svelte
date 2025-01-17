@@ -108,7 +108,7 @@
       <div class="flex flex-col gap-4 w-full">
         <h2 class="text-xl font-medium uppercase md:text-3xl">Mobile</h2>
         <p class="text-base md:text-xl text-neutral">
-          AnkiMobile is the official iOS app and all purchases help fund Anki's development.
+          AnkiMobile is the official iOS app and all purchases help to fund Anki's development.
         </p>
       </div>
       <div class="flex flex-col md:divide-y-2 divide-y divide-white/[13%]">
