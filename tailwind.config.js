@@ -8,7 +8,7 @@ export default {
         sans: ['Outfit Variable', 'sans-serif'],
       },
       colors: {
-        background: '#0F0F15',
+        background: '#171717',
         foreground: '#FFFFFF',
         primary: '#7EBBE5',
         secondary: '#968CA8',
