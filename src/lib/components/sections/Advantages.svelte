@@ -10,9 +10,9 @@
 
   const advantages: Advantage[] = [
     {
-      title: 'synchronisation',
+      title: 'synchronization',
       description:
-        'The free AnkiWeb synchronisation service lets you sync your cards across devices.',
+        'The free AnkiWeb synchronization service lets you sync your cards across devices.',
       icon: '/icons/synchronize.svg',
     },
     {
@@ -21,12 +21,12 @@
       icon: '/icons/gallery.svg',
     },
     {
-      title: 'customisation',
+      title: 'customization',
       description: 'Easily change your flashcard layouts and the timing of their reviews.',
       icon: '/icons/customisation.svg',
     },
     {
-      title: 'optimisation',
+      title: 'optimization',
       description: 'Anki can handle decks of 100,000+ cards with no problems.',
       icon: '/icons/optimisation.svg',
     },
