@@ -39,5 +39,5 @@
       </a>
     </div>
   </div>
-  <img src="{base}/icons/anki.svg" alt="menu" class="size-1/4 mx-auto hidden lg:block" />
+  <img src="{base}/icons/anki.svg" alt="logo" class="size-1/4 mx-auto hidden lg:block" />
 </section>
