@@ -21,13 +21,13 @@
       MacOS: [
         {
           href: buildDownloadURL('mac-apple', 'dmg'),
-          text: `Apple Silicon ${anki_version}`,
+          text: `Anki Apple Silicon ${anki_version}`,
           icon: '/icons/download.svg',
           supportsQt5: false,
         },
         {
           href: buildDownloadURL('mac-intel', 'dmg'),
-          text: `Apple Intel ${anki_version}`,
+          text: `Anki Apple Intel ${anki_version}`,
           icon: '/icons/download.svg',
           supportsQt5: true,
         },
@@ -81,9 +81,9 @@
       <div class="flex items-center justify-between gap-12">
         <div class="flex flex-col gap-4 w-full">
           <div class="flex justify-between items-center">
-            <h2 class="text-2xl font-medium uppercase md:text-4xl">Desktop</h2>
+            <h2 class="text-xl font-medium uppercase md:text-3xl">Desktop</h2>
           </div>
-          <p class="text-lg md:text-2xl text-neutral">
+          <p class="text-base md:text-xl text-neutral">
             If you have a recent Mac, pick the Apple Silicon version for better performance/battery
             life. Older Macs will need to use the Intel version instead.
           </p>
@@ -92,7 +92,7 @@
       <div class="flex flex-col md:divide-y-2 divide-y divide-white/[13%]">
         {#each Object.entries(download_options.desktop) as [key, value]}
           <div class="flex justify-between py-5 md:px-5">
-            <h2 class="text-xl font-medium md:text-3xl">{key}</h2>
+            <h2 class="text-lg font-medium md:text-2xl">{key}</h2>
             <div class="flex flex-col items-end gap-3">
               {#each value as { href, text, icon }}
                 <DownloadLink {href} {text} {icon} />
@@ -106,15 +106,15 @@
       class="xl:col-span-2 border-white/[13%] md:border-2 flex flex-col md:px-14 md:py-9 gap-8 md:gap-20"
     >
       <div class="flex flex-col gap-4 w-full">
-        <h2 class="text-2xl font-medium uppercase md:text-4xl">Mobile</h2>
-        <p class="text-lg md:text-2xl text-neutral">
-          AnkiMobile is the official iOS app and all purchases help to fund Anki's development.
+        <h2 class="text-xl font-medium uppercase md:text-3xl">Mobile</h2>
+        <p class="text-base md:text-xl text-neutral">
+          AnkiMobile is the official iOS app and all purchases help fund Anki's development.
         </p>
       </div>
       <div class="flex flex-col md:divide-y-2 divide-y divide-white/[13%]">
         {#each Object.entries(download_options.mobile) as [key, value]}
           <div class="flex justify-between py-5 md:px-5">
-            <h2 class="text-xl font-medium md:text-3xl">{key}</h2>
+            <h2 class="text-lg font-medium md:text-2xl">{key}</h2>
             <div class="flex flex-col items-end gap-3">
               {#each value as { href, text, icon }}
                 <DownloadLink {href} {text} {icon} />
