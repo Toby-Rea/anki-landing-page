@@ -11,7 +11,7 @@
 </script>
 
 <div
-  class="border-white/[13%] gap-2 flex flex-col justify-end xl:aspect-[16/10] xl:px-14 xl:py-9 xl:border-2"
+  class="border-white/[13%] gap-2 flex flex-col justify-end xl:px-14 xl:py-9 xl:border-2"
 >
   <div class="flex items-center gap-4 xl:items-start xl:flex-col xl:gap-3">
     <img src="{base}{icon}" alt="icon" class="size-8 xl:size-12" />
