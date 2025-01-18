@@ -15,7 +15,7 @@
 >
   <div class="flex items-center gap-4 xl:items-start xl:flex-col xl:gap-3">
     <img src="{base}{icon}" alt="icon" class="size-8 xl:size-12" />
-    <h1 class="text-2xl font-medium uppercase xl:text-3xl">{title}</h1>
+    <h1 class="text-xl font-medium uppercase xl:text-2xl">{title}</h1>
   </div>
-  <p class="text-neutral xl:text-xl xl:leading-9 xl:tracking-[0.24px]">{description}</p>
+  <p class="text-neutral xl:text-lg xl:leading-9 xl:tracking-[0.24px]">{description}</p>
 </div>
