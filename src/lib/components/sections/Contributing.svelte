@@ -16,7 +16,7 @@
       href: 'https://github.com/ankitects/anki/blob/main/docs/contributing.md',
     },
     {
-      title: 'shared decks',
+      title: 'share decks',
       description:
         "Sharing your deck can make it easier for others to start learning what you're studying.",
       href: 'https://docs.ankiweb.net/contrib#sharing-decks-publicly',

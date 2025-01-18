@@ -21,6 +21,6 @@
 </svelte:head>
 
 <Navigation />
-<main class="mx-auto max-w-[1624px] px-14">
+<main class="mx-auto max-w-[1440px] px-14">
   {@render children?.()}
 </main>
