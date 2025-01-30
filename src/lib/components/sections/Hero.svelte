@@ -1,3 +1,7 @@
+<script>
+  import { base } from '$app/paths';
+</script>
+
 <section class="flex items-center justify-between min-w-full py-20">
   <div class="flex flex-col max-w-[768px] sm:pr-12 gap-14 xl:gap-20">
     <div class="flex flex-col gap-9">
@@ -35,4 +39,5 @@
       </a>
     </div>
   </div>
+  <img src="{base}/icons/anki.svg" alt="logo" class="size-1/4 mx-auto hidden lg:block" />
 </section>
