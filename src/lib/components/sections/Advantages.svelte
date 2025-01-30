@@ -44,7 +44,7 @@
       <p>Here are a few reasons why users love Anki.</p>
     {/snippet}
   </DualHeader>
-  <div class="grid xl:grid-cols-6 gap-9">
+  <div class="grid lg:grid-cols-3 xl:grid-cols-6 gap-9">
     {#each advantages as { title, description, icon }, i}
       <div class={i > 1 ? 'xl:col-span-2' : 'xl:col-span-3'}>
         <AdvantageCard {title} {description} {icon} />
