@@ -1,6 +1,7 @@
 <script lang="ts">
   import { base } from '$app/paths';
   import DualHeader from '$lib/components/common/DualHeader.svelte';
+  import { fade } from 'svelte/transition';
 
   type Testimonial = {
     quote: string;
@@ -8,7 +9,6 @@
   };
 
   let index: number = $state(0);
-  let opacity: number = $state(100);
 
   const testimonials: Testimonial[] = [
     {
@@ -18,7 +18,7 @@
     },
     {
       quote:
-      'No other application [...] comes remotely close to Anki in terms of the number and power of features, flexibility in study, or implementation of spaced repetition.',
+        'No other application [...] comes remotely close to Anki in terms of the number and power of features, flexibility in study, or implementation of spaced repetition.',
       author: 'K. M. Lawson, "Anki All The Way"',
     },
     {
@@ -29,12 +29,7 @@
   ];
 
   function changeQuote(direction: number) {
-    opacity = 0;
-    setTimeout(() => {
-      opacity = 100;
-      index = (index + direction + testimonials.length) % testimonials.length;;
-    }, 300);
-   
+    index = (index + direction + testimonials.length) % testimonials.length;
   }
 
   // Calculate the required height of the quote container to display a consistent height and avoid
@@ -63,11 +58,20 @@
   <div
     class="md:py-24 md:px-14 gap-6 lg:gap-20 flex flex-col justify-between md:border-y-2 border-white/[13%]"
   >
-    <p class="text-lg lg:text-3xl font-light tracking-[1.02px] transition duration-300 opacity-{opacity}" style="height: {maxHeight}px;">
-      "{testimonials[index].quote}"
-    </p>
+    {#key index}
+      <p
+        class="text-lg lg:text-3xl font-light tracking-[1.02px]"
+        style="height: {maxHeight}px;"
+      >
+        <span in:fade={{ duration: 800 }}>"{testimonials[index].quote}"</span>
+      </p>
+    {/key}
     <div class="flex items-center justify-between h-9">
-      <span class="pr-8 sm:text-lg text-neutral transition duration-300 opacity-{opacity}">— {testimonials[index].author}</span>
+      {#key index}
+        <span in:fade={{ duration: 800 }} class="pr-8 sm:text-lg text-neutral"
+          >— {testimonials[index].author}</span
+        >
+      {/key}
       <div class="flex gap-6 lg:gap-14 min-w-fit">
         <button onclick={() => changeQuote(-1)} class="hover:opacity-60">
           <img src="{base}/icons/left-arrow.svg" alt="left-arrow" class="size-6 lg:size-9" />
