@@ -5,6 +5,7 @@
   type Testimonial = {
     quote: string;
     author: string;
+    link?: string;
   };
 
   let index: number = $state(0);
@@ -15,16 +16,18 @@
       quote:
         'The single biggest change that Anki brings about is that it means memory is no longer a haphazard event, to be left to chance. Rather, it guarantees I will remember something, with minimal effort. That is, Anki makes memory a choice.',
       author: 'Michael A. Nielsen, "Augmenting Long-term Memory"',
+      link: 'https://augmentingcognition.com/ltm.html',
     },
     {
       quote:
       'No other application [...] comes remotely close to Anki in terms of the number and power of features, flexibility in study, or implementation of spaced repetition.',
       author: 'K. M. Lawson, "Anki All The Way"',
+      link: 'https://huginn.net/foolsworkshop/reviews/index.html%3fp=124.html',
     },
     {
       quote:
         "... consistent use of Anki has opened more doors for me intellectually than I could have imagined two years ago. And being a poor student, I'll be forever grateful that you've provided this software open-source and free of charge.",
-      author: 'keldin, via Email',
+      author: 'Keldin, via Email',
     },
   ];
 
@@ -67,7 +70,20 @@
       "{testimonials[index].quote}"
     </p>
     <div class="flex items-center justify-between h-9">
-      <span class="pr-8 sm:text-lg text-neutral transition duration-300 opacity-{opacity}">— {testimonials[index].author}</span>
+      <span class="pr-8 sm:text-lg text-neutral transition duration-300 opacity-{opacity}"
+        >— {#if testimonials[index].link}
+          <a
+            class="text-primary hover:opacity-80"
+            target="_blank"
+            rel="noopener noreferrer"
+            href={testimonials[index].link}
+          >
+            {testimonials[index].author}
+          </a>
+        {:else}
+          {testimonials[index].author}
+        {/if}
+      </span>
       <div class="flex gap-6 lg:gap-14 min-w-fit">
         <button onclick={() => changeQuote(-1)} class="hover:opacity-60">
           <img src="{base}/icons/left-arrow.svg" alt="left-arrow" class="size-6 lg:size-9" />
