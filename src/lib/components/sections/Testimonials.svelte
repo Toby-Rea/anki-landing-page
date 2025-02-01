@@ -61,7 +61,7 @@
     {/snippet}
   </DualHeader>
   <div
-    class="md:py-24 md:px-14 gap-6 lg:gap-20 flex flex-col justify-between md:border-y-2 border-white/[13%]"
+    class="md:py-24 md:px-14 gap-6 lg:gap-20 flex flex-col justify-between md:border-y-2 border-black/[13%] dark:border-white/[13%]"
   >
     <p class="text-lg lg:text-3xl font-light tracking-[1.02px] transition duration-300 opacity-{opacity}" style="height: {maxHeight}px;">
       "{testimonials[index].quote}"

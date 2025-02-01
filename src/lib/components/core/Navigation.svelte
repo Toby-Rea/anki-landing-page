@@ -53,7 +53,7 @@
 </script>
 
 <header
-  class="sticky top-0 z-50 w-full border-white/[13%] bg-background/95 backdrop-blur-md supports-backdrop-filter:bg-background/60 py-4 border-b-2"
+  class="sticky top-0 z-50 w-full border-black/[13%] dark:border-white/[13%] bg-light-background/95 dark:bg-background/95 backdrop-blur-md supports-backdrop-filter:bg-light-background/60 dark:supports-backdrop-filter:bg-background/60 py-4 border-b-2"
 >
   <div class="flex items-center justify-between h-full max-w-[1440px] mx-auto px-8">
     <Logo />
@@ -70,7 +70,7 @@
 
 {#if show}
   <div
-    class="fixed flex flex-col gap-4 items-center justify-center w-screen h-screen top-0 left-0 z-999 bg-background/95 backdrop-blur-md supports-backdrop-filter:bg-background/90"
+    class="fixed flex flex-col gap-4 items-center justify-center w-screen h-screen top-0 left-0 z-999 bg-light-background/95 dark:bg-background/95 backdrop-blur-md supports-backdrop-filter:bg-light-background/90 dark:supports-backdrop-filter:bg-background/90"
     role="navigation"
     transition:fade={{ delay: 0, duration: 250 }}
   >

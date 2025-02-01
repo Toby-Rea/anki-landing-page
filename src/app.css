@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@plugin '@tailwindcss/aspect-ratio';
 
 @theme {
   --font-sans: Outfit Variable, sans-serif;
@@ -10,10 +9,13 @@
   --color-secondary: #968ca8;
   --color-neutral: #8b9297;
   --color-error: #ff5449;
+
+  --color-light-background: #ffffff;
+  --color-light-foreground: #171717;
 }
 
 @layer base {
   body {
-    @apply font-sans bg-background text-foreground;
+    @apply font-sans bg-light-background dark:bg-background text-light-foreground dark:text-foreground;
   }
 }
