@@ -34,7 +34,6 @@
   "type": "module",
   "dependencies": {
     "@fontsource-variable/outfit": "^5.1.0",
-    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/vite": "^4.0.1"
   }
 }
