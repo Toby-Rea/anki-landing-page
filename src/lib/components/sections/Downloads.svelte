@@ -78,7 +78,9 @@
     {/snippet}
   </DualHeader>
   <div class="grid xl:grid-cols-5 w-full xl:flex-row gap-9">
-    <div class="xl:col-span-3 border-black/[13%] dark:border-white/[13%] md:border-2 flex flex-col md:px-14 md:py-9 gap-8 md:gap-20">
+    <div
+      class="xl:col-span-3 border-black/[13%] dark:border-white/[13%] md:border-2 flex flex-col md:px-14 md:py-9 gap-8 md:gap-20"
+    >
       <div class="flex items-center justify-between gap-12">
         <div class="flex flex-col gap-4 w-full">
           <div class="flex justify-between items-center">

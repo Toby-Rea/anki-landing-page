@@ -11,9 +11,14 @@
   </DualHeader>
   <div class="flex flex-col items-center gap-6 md:gap-20 md:flex-row">
     <img
-      src="{base}/graphics/deck-graphic.svg"
-      alt="deck-graphic"
-      class="aspect-16/10 grow max-w-[90%] md:max-w-[40%]"
+      src="{base}/graphics/deck-graphic-light.svg"
+      alt="deck-graphic-light"
+      class="aspect-16/10 grow max-w-[90%] md:max-w-[40%] border-2 border-black/[13%] dark:hidden"
+    />
+    <img
+      src="{base}/graphics/deck-graphic-dark.svg"
+      alt="deck-graphic-dark"
+      class="aspect-16/10 grow max-w-[90%] md:max-w-[40%] hidden dark:inline"
     />
     <div class="flex flex-col gap-2 md:gap-6 md:w-[60%]">
       <h2 class="text-xl lg:text-3xl font-medium uppercase tracking-[1.08px]">Decks</h2>
@@ -25,9 +30,14 @@
   </div>
   <div class="flex flex-col items-center gap-6 md:gap-20 md:flex-row-reverse">
     <img
-      src="{base}/graphics/review-graphic.svg"
-      alt="deck-graphic"
-      class="aspect-16/10 grow max-w-[90%] md:max-w-[40%]"
+      src="{base}/graphics/review-graphic-light.svg"
+      alt="review-graphic-light"
+      class="aspect-16/10 grow max-w-[90%] md:max-w-[40%] border-2 border-black/[13%] dark:hidden"
+    />
+    <img
+      src="{base}/graphics/review-graphic-dark.svg"
+      alt="review-graphic-dark"
+      class="aspect-16/10 grow max-w-[90%] md:max-w-[40%] hidden dark:inline"
     />
     <div class="flex flex-col gap-2 md:gap-6 md:w-[60%]">
       <h2 class="text-xl lg:text-3xl font-medium uppercase tracking-[1.08px]">Reviews</h2>
