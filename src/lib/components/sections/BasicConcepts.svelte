@@ -13,7 +13,7 @@
     <img
       src="{base}/graphics/deck-graphic.svg"
       alt="deck-graphic"
-      class="aspect-[16/10] grow max-w-[90%] md:max-w-[40%]"
+      class="aspect-16/10 grow max-w-[90%] md:max-w-[40%]"
     />
     <div class="flex flex-col gap-2 md:gap-6 md:w-[60%]">
       <h2 class="text-xl lg:text-3xl font-medium uppercase tracking-[1.08px]">Decks</h2>
@@ -27,7 +27,7 @@
     <img
       src="{base}/graphics/review-graphic.svg"
       alt="deck-graphic"
-      class="aspect-[16/10] grow max-w-[90%] md:max-w-[40%]"
+      class="aspect-16/10 grow max-w-[90%] md:max-w-[40%]"
     />
     <div class="flex flex-col gap-2 md:gap-6 md:w-[60%]">
       <h2 class="text-xl lg:text-3xl font-medium uppercase tracking-[1.08px]">Reviews</h2>
