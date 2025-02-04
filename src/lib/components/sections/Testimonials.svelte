@@ -69,11 +69,11 @@
     <div class="flex items-center justify-between h-9">
       <span class="pr-8 sm:text-lg text-neutral transition duration-300 opacity-{opacity}">— {testimonials[index].author}</span>
       <div class="flex gap-6 lg:gap-14 min-w-fit">
-        <button onclick={() => changeQuote(-1)} class="hover:opacity-60">
-          <img src="{base}/icons/left-arrow.svg" alt="left-arrow" class="size-6 lg:size-9" />
+        <button onclick={() => changeQuote(-1)} class="hover:opacity-60 hover:cursor-pointer">
+          <img src="{base}/icons/left-arrow.svg" alt="left-arrow" class="size-6 lg:size-9 filter dark:invert" />
         </button>
-        <button onclick={() => changeQuote(+1)} class="hover:opacity-60">
-          <img src="{base}/icons/right-arrow.svg" alt="right-arrow" class="size-6 lg:size-9" />
+        <button onclick={() => changeQuote(+1)} class="hover:opacity-60 hover:cursor-pointer">
+          <img src="{base}/icons/right-arrow.svg" alt="right-arrow" class="size-6 lg:size-9 filter dark:invert" />
         </button>
       </div>
     </div>
