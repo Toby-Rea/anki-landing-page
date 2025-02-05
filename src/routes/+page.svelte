@@ -5,13 +5,13 @@
   import Testimonials from '$lib/components/sections/Testimonials.svelte';
   import BasicConcepts from '$lib/components/sections/BasicConcepts.svelte';
   import Downloads from '$lib/components/sections/Downloads.svelte';
+  import TableOfContents from '$lib/components/core/TableOfContents.svelte';
 </script>
 
-<main class="flex flex-col gap-9">
-  <Hero />
-  <Advantages />
-  <Testimonials />
-  <BasicConcepts />
-  <Contributing />
-  <Downloads />
-</main>
+<Hero />
+<Advantages />
+<Testimonials />
+<BasicConcepts />
+<Contributing />
+<Downloads />
+<TableOfContents />

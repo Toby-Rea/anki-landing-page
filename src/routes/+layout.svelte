@@ -14,13 +14,10 @@
 <svelte:head>
   <title>Anki - powerful, intelligent flashcards</title>
   <link rel="icon" href="{base}/logo.svg" />
-  <meta
-    name="description"
-    content="Anki - a program which makes remembering things easy."
-  />
+  <meta name="description" content="Anki - a program which makes remembering things easy." />
 </svelte:head>
 
 <Navigation />
-<main class="mx-auto max-w-[1440px] px-8 md:px-14">
+<main class="mx-auto max-w-7xl px-8">
   {@render children?.()}
 </main>
