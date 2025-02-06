@@ -8,6 +8,7 @@
 
   const options: MenuOption[] = [
     { text: 'Docs', href: 'https://docs.ankiweb.net/' },
+    { text: 'Forums', href: 'https://forums.ankiweb.net/' },
     { text: 'AnkiWeb', href: 'https://ankiweb.net/' },
   ];
 </script>
