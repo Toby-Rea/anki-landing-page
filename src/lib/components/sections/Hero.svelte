@@ -23,7 +23,7 @@
             event.preventDefault();
             document.querySelector('#downloads')?.scrollIntoView({ behavior: 'smooth' });
           }}
-          class="bg-primary aspect-16/5 w-40 md:w-56 px-3 lg:px-8 border-2 border-primary text-light-background dark:text-background flex justify-center items-center text-lg md:text-xl font-bold hover:opacity-80 transition-all duration-200"
+          class="bg-primary aspect-16/5 w-40 md:w-56 px-3 lg:px-8 border-2 border-primary text-background flex justify-center items-center text-lg md:text-xl font-bold hover:opacity-80 transition-all duration-200"
         >
           Download
         </a>
