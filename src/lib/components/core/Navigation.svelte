@@ -63,7 +63,7 @@
       aria-controls="dropdown-menu"
       class="focus:shadow-solid flex items-center justify-center gap-5 capitalize hover:opacity-60"
     >
-      <img src="{base}/icons/menu-bars.svg" alt="menu" class="size-10" />
+      <img src="{base}/icons/menu-bars.svg" alt="menu" class="size-10 filter dark:invert" />
     </button>
   </div>
 </header>
