@@ -3,7 +3,7 @@
   import DownloadLink from '$lib/components/common/DownloadLink.svelte';
   import { base } from '$app/paths';
 
-  const anki_version: string = '24.11';
+  const anki_version: string = '25.02';
 
   function buildDownloadURL(platform: string, extension: string): string {
     return `https://github.com/ankitects/anki/releases/download/${anki_version}/anki-${anki_version}-${platform}-qt6.${extension}`;
