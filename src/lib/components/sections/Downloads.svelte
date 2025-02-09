@@ -85,8 +85,13 @@
             <h2 class="text-xl font-medium uppercase md:text-3xl">Desktop</h2>
           </div>
           <p class="text-base md:text-xl text-neutral">
-            If you have a recent Mac, pick the Apple Silicon version for better performance/battery
-            life. Older Macs will need to use the Intel version instead.
+            If you have a <a
+              href="https://support.apple.com/en-au/116943"
+              class="text-primary hover:opacity-80"
+              target="_blank"
+              rel="noopener noreferrer">recent Mac</a
+            >, pick the Apple Silicon version for better performance/battery life. Older Macs will
+            need to use the Intel version instead.
           </p>
         </div>
       </div>
