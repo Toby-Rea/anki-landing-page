@@ -61,7 +61,7 @@
       onclick={() => toggleMenu()}
       aria-expanded={show}
       aria-controls="dropdown-menu"
-      class="focus:shadow-solid flex items-center justify-center gap-5 capitalize hover:opacity-60"
+      class="focus:shadow-solid flex items-center justify-center gap-5 capitalize hover:opacity-60 hover:cursor-pointer"
     >
       <img src="{base}/icons/menu-bars.svg" alt="menu" class="size-10 filter dark:invert" />
     </button>
