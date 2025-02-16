@@ -53,7 +53,7 @@
 </script>
 
 <header
-  class="sticky top-0 z-50 w-full border-white/[13%] bg-background/95 backdrop-blur-md supports-backdrop-filter:bg-background/60 py-4 border-b-2"
+  class="sticky top-0 z-50 w-full border-black/[13%] dark:border-white/[13%] bg-background/95 backdrop-blur-md supports-backdrop-filter:bg-background/60 py-4 border-b-2"
 >
   <div class="flex items-center justify-between h-full max-w-[1440px] mx-auto px-8">
     <Logo />
@@ -61,9 +61,9 @@
       onclick={() => toggleMenu()}
       aria-expanded={show}
       aria-controls="dropdown-menu"
-      class="focus:shadow-solid flex items-center justify-center gap-5 capitalize hover:opacity-60"
+      class="focus:shadow-solid flex items-center justify-center gap-5 capitalize hover:opacity-60 hover:cursor-pointer"
     >
-      <img src="{base}/icons/menu-bars.svg" alt="menu" class="size-10" />
+      <img src="{base}/icons/menu-bars.svg" alt="menu" class="size-10 filter dark:invert" />
     </button>
   </div>
 </header>

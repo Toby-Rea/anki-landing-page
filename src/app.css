@@ -1,19 +1,35 @@
 @import 'tailwindcss';
-@plugin '@tailwindcss/aspect-ratio';
+
+@layer base {
+  :root {
+    --foreground: 0, 0%, 0%;
+    --background: 0, 0%, 97%;
+    --primary: 205, 67%, 40%;
+    --primary-darker: 208, 65%, 50%;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --foreground: 0, 0%, 100%;
+      --background: 0, 0%, 3%;
+      --primary: 205, 67%, 70%;
+      --primary-darker: 208, 65%, 60%;
+    }
+  }
+
+  body {
+    @apply font-sans bg-background text-foreground;
+  }
+}
 
 @theme {
   --font-sans: Outfit Variable, sans-serif;
 
-  --color-background: #171717;
-  --color-foreground: #ffffff;
-  --color-primary: #7ebbe5;
+  --color-primary-darker: hsl(var(--primary-darker));
+  --color-foreground: hsl(var(--foreground));
+  --color-background: hsl(var(--background));
+  --color-primary: hsl(var(--primary));
   --color-secondary: #968ca8;
-  --color-neutral: #8b9297;
+  --color-neutral: hsla(var(--foreground), 70%);
   --color-error: #ff5449;
-}
-
-@layer base {
-  body {
-    @apply font-sans bg-background text-foreground;
-  }
 }

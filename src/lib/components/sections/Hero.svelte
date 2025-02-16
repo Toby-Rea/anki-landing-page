@@ -33,7 +33,7 @@
         aria-label="Anki Manual: Background"
         target="_blank"
         rel="noopener noreferrer"
-        class="aspect-16/5 w-40 md:w-56 px-3 lg:px-8 text-white border-2 border-white/[13%] flex justify-center items-center text-lg md:text-xl font-bold hover:opacity-60 transition-all duration-200"
+        class="aspect-16/5 w-40 md:w-56 px-3 lg:px-8 text-black dark:text-white border-2 border-black/[13%] dark:border-white/[13%] flex justify-center items-center text-lg md:text-xl font-bold hover:opacity-60 transition-all duration-200"
       >
         + Learn more
       </a>

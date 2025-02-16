@@ -40,7 +40,7 @@
     {/snippet}
   </DualHeader>
   <div
-    class="grid grid-cols-1 md:grid-cols-3 border-2 md:divide-x-2 divide-white/[13%] border-white/[13%]"
+    class="grid grid-cols-1 md:grid-cols-3 border-2 md:divide-x-2 divide-black/[13%] dark:divide-white/[13%] border-black/[13%] dark:border-white/[13%]"
   >
     {#each contributingCards as { title, description, href }}
       <LinkCard {title} {description} {href} />

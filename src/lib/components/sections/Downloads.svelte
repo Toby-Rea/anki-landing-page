@@ -78,7 +78,9 @@
     {/snippet}
   </DualHeader>
   <div class="grid xl:grid-cols-5 w-full xl:flex-row gap-9">
-    <div class="xl:col-span-3 border-white/[13%] md:border-2 flex flex-col md:px-14 md:py-9 gap-8 md:gap-20">
+    <div
+      class="xl:col-span-3 border-black/[13%] dark:border-white/[13%] md:border-2 flex flex-col md:px-14 md:py-9 gap-8 md:gap-20"
+    >
       <div class="flex items-center justify-between gap-12">
         <div class="flex flex-col gap-4 w-full">
           <div class="flex justify-between items-center">
@@ -95,7 +97,7 @@
           </p>
         </div>
       </div>
-      <div class="flex flex-col md:divide-y-2 divide-y divide-white/[13%]">
+      <div class="flex flex-col md:divide-y-2 divide-y divide-black/[13%] dark:divide-white/[13%]">
         {#each Object.entries(download_options.desktop) as [key, value]}
           <div class="flex justify-between py-5 md:px-5">
             <h2 class="text-lg font-medium md:text-2xl">{key}</h2>
@@ -110,7 +112,7 @@
       <a href="https://github.com/ankitects/anki/releases" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 text-base font-medium md:text-xl md:px-5 text-primary hover:opacity-60">Change Notes & Older Releases <img src="{base}/icons/link-arrow.svg" alt="outlink" class="size-4" /></a>
     </div>
     <div
-      class="xl:col-span-2 border-white/[13%] md:border-2 flex flex-col md:px-14 md:py-9 gap-8 md:gap-20"
+      class="xl:col-span-2 border-black/[13%] dark:border-white/[13%] md:border-2 flex flex-col md:px-14 md:py-9 gap-8 md:gap-20"
     >
       <div class="flex flex-col gap-4 w-full">
         <h2 class="text-xl font-medium uppercase md:text-3xl">Mobile</h2>
@@ -118,7 +120,7 @@
           AnkiMobile is the official iOS app and all purchases help fund Anki's development.
         </p>
       </div>
-      <div class="flex flex-col md:divide-y-2 divide-y divide-white/[13%]">
+      <div class="flex flex-col md:divide-y-2 divide-y divide-black/[13%] dark:divide-white/[13%]">
         {#each Object.entries(download_options.mobile) as [key, value]}
           <div class="flex justify-between py-5 md:px-5">
             <h2 class="text-lg font-medium md:text-2xl">{key}</h2>

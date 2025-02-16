@@ -59,7 +59,7 @@
     {/snippet}
   </DualHeader>
   <div
-    class="md:py-24 md:px-14 gap-6 lg:gap-20 flex flex-col justify-between md:border-y-2 border-white/[13%]"
+    class="md:py-24 md:px-14 gap-6 lg:gap-20 flex flex-col justify-between md:border-y-2 border-black/[13%] dark:border-white/[13%]"
   >
     {#key index}
       <p
@@ -87,11 +87,11 @@
       </span>
       {/key}
       <div class="flex gap-6 lg:gap-14 min-w-fit">
-        <button onclick={() => changeQuote(-1)} class="hover:opacity-60">
-          <img src="{base}/icons/left-arrow.svg" alt="left-arrow" class="size-6 lg:size-9" />
+        <button onclick={() => changeQuote(-1)} class="hover:opacity-60 hover:cursor-pointer">
+          <img src="{base}/icons/left-arrow.svg" alt="left-arrow" class="size-6 lg:size-9 filter dark:invert" />
         </button>
-        <button onclick={() => changeQuote(+1)} class="hover:opacity-60">
-          <img src="{base}/icons/right-arrow.svg" alt="right-arrow" class="size-6 lg:size-9" />
+        <button onclick={() => changeQuote(+1)} class="hover:opacity-60 hover:cursor-pointer">
+          <img src="{base}/icons/right-arrow.svg" alt="right-arrow" class="size-6 lg:size-9 filter dark:invert" />
         </button>
       </div>
     </div>
