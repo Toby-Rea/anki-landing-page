@@ -33,3 +33,7 @@
   --color-neutral: hsla(var(--foreground), 70%);
   --color-error: #ff5449;
 }
+
+html {
+  scroll-behavior: smooth;
+}
