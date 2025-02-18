@@ -5,7 +5,6 @@
   import Testimonials from '$lib/components/sections/Testimonials.svelte';
   import BasicConcepts from '$lib/components/sections/BasicConcepts.svelte';
   import Downloads from '$lib/components/sections/Downloads.svelte';
-  import TableOfContents from '$lib/components/core/TableOfContents.svelte';
 </script>
 
 <Hero />
@@ -14,4 +13,3 @@
 <BasicConcepts />
 <Contributing />
 <Downloads />
-<TableOfContents />
