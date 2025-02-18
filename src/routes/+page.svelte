@@ -7,11 +7,9 @@
   import Downloads from '$lib/components/sections/Downloads.svelte';
 </script>
 
-<main class="flex flex-col gap-9">
-  <Hero />
-  <Advantages />
-  <Testimonials />
-  <BasicConcepts />
-  <Contributing />
-  <Downloads />
-</main>
+<Hero />
+<Advantages />
+<Testimonials />
+<BasicConcepts />
+<Contributing />
+<Downloads />
