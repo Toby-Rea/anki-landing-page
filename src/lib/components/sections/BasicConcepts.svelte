@@ -13,16 +13,16 @@
     <img
       src="{base}/graphics/deck-graphic-light.svg"
       alt="deck-graphic-light"
-      class="aspect-16/10 grow max-w-[90%] md:max-w-[40%] border-2 border-black/[13%] dark:hidden"
+      class="aspect-5/3 grow md:max-w-[35%] border-2 border-black/[13%] dark:hidden"
     />
     <img
       src="{base}/graphics/deck-graphic-dark.svg"
       alt="deck-graphic-dark"
-      class="aspect-16/10 grow max-w-[90%] md:max-w-[40%] hidden dark:inline"
+      class="aspect-5/3 grow md:max-w-[35%] hidden dark:inline"
     />
-    <div class="flex flex-col gap-2 md:gap-6 md:w-[60%]">
-      <h2 class="text-xl lg:text-3xl font-medium uppercase tracking-[1.08px]">Decks</h2>
-      <p class="lg:text-xl text-neutral">
+    <div class="w-full flex flex-col gap-2 @container">
+      <h3 class="text-2xl font-medium capitalize">Decks</h3>
+      <p class="text-[max(3cqw,_1em)] text-subtle tracking-wide leading-snug">
         Decks are groups of flashcards that allow you to study specific parts of your collection
         instead of everything all at once. Create a new deck and add some flashcards to get started.
       </p>
@@ -32,16 +32,16 @@
     <img
       src="{base}/graphics/review-graphic-light.svg"
       alt="review-graphic-light"
-      class="aspect-16/10 grow max-w-[90%] md:max-w-[40%] border-2 border-black/[13%] dark:hidden"
+      class="aspect-5/3 grow md:max-w-[35%] border-2 border-black/[13%] dark:hidden"
     />
     <img
       src="{base}/graphics/review-graphic-dark.svg"
       alt="review-graphic-dark"
-      class="aspect-16/10 grow max-w-[90%] md:max-w-[40%] hidden dark:inline"
+      class="aspect-5/3 grow md:max-w-[35%] hidden dark:inline"
     />
-    <div class="flex flex-col gap-2 md:gap-6 md:w-[60%]">
-      <h2 class="text-xl lg:text-3xl font-medium uppercase tracking-[1.08px]">Reviews</h2>
-      <p class="lg:text-xl text-neutral">
+    <div class="w-full flex flex-col gap-2 @container">
+      <h3 class="text-2xl font-medium capitalize">Reviews</h3>
+      <p class="text-[max(3cqw,_1em)] text-subtle tracking-wide leading-snug">
         When you're ready, start reviewing your flashcards. Rate your recall with the most suitable
         option and Anki will schedule the next review for when you're most likely to forget the
         information.

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import '@fontsource-variable/outfit';
+  import '@fontsource-variable/hanken-grotesk';
   import '../app.css';
   import Navigation from '$lib/components/core/Navigation.svelte';
   import { base } from '$app/paths';
@@ -18,6 +18,6 @@
 </svelte:head>
 
 <Navigation />
-<main class="mx-auto max-w-7xl px-8">
+<main class="mx-auto px-8 max-w-348">
   {@render children?.()}
 </main>

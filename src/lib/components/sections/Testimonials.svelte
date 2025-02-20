@@ -63,7 +63,7 @@
   >
     {#key index}
       <p
-        class="text-lg lg:text-3xl font-light tracking-[1.02px]"
+        class="text-lg lg:text-3xl text-foreground font-medium leading-snug tracking-wider"
         style="height: {maxHeight}px;"
       >
         <span in:fade={{ duration: 800 }}>"{testimonials[index].quote}"</span>
@@ -71,7 +71,7 @@
     {/key}
     <div class="flex items-center justify-between h-9">
       {#key index}
-        <span in:fade={{ duration: 800 }} class="pr-8 sm:text-lg text-neutral"
+        <span in:fade={{ duration: 800 }} class="pr-8 sm:text-lg text-subtle"
           >— {#if testimonials[index].link}
           <a
             class="text-primary hover:opacity-80"

@@ -16,7 +16,7 @@
 <header
   class="bg-background/90 backdrop-blur-lg sticky inset-x-0 top-0 z-10 border-b border-foreground/[13%]"
 >
-  <div class="max-w-7xl mx-auto">
+  <div class="max-w-348 mx-auto">
     <div class="flex h-16 items-center justify-between gap-8 px-6">
       <div class="flex gap-4">
         <a
@@ -24,7 +24,7 @@
           class="flex items-center gap-2 shrink-0 [&>*]:pointer-events-none [&>*]:select-none"
         >
           <img src="{base}/logo.svg" alt="Logo" class="size-7" />
-          <span class="font-semibold text-foreground text-xl leading-none tracking-wider">
+          <span class="font-bold text-foreground text-xl leading-none tracking-widest">
             ANKI
           </span>
         </a>
@@ -32,7 +32,7 @@
       <div class="flex items-center h-full max-md:hidden pr-8">
         {#each options as { text, href }}
           <a
-            class="px-3 select-none transition-all duration-150 ease-out flex items-center text-foreground h-full hover:shadow-[inset_0_-2px_#7EBBE5]"
+            class="px-3 select-none transition-all duration-150 ease-out flex items-center text-foreground h-full hover:shadow-[inset_0_-2px_var(--color-primary)]"
             {href}
           >
             {text}
@@ -52,7 +52,7 @@
         </a>
         <a
           href="#downloads"
-          class="ml-3 rounded hover:opacity-80 bg-gradient-to-r from-primary-darker to-primary text-background h-12 flex items-center px-4 font-semibold leading-none cursor-pointer transition-all duration-300 ease-out"
+          class="ml-3 rounded hover:opacity-80 bg-gradient-to-r from-primary-darker to-primary text-background h-12 flex items-center px-4 font-bold leading-none cursor-pointer transition-all duration-300 ease-out"
         >
           Download Anki
         </a>

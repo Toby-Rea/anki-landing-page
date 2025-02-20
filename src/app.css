@@ -2,7 +2,8 @@
 
 @layer base {
   :root {
-    --foreground: 0, 0%, 0%;
+    --foreground: 248, 8%, 20%;
+    --subtle: 248, 8%, 20%;
     --background: 0, 0%, 97%;
     --primary: 205, 67%, 40%;
     --primary-darker: 208, 65%, 50%;
@@ -11,6 +12,7 @@
   @media (prefers-color-scheme: dark) {
     :root {
       --foreground: 0, 0%, 100%;
+      --subtle: 0, 0%, 85%;
       --background: 0, 0%, 3%;
       --primary: 205, 67%, 70%;
       --primary-darker: 208, 65%, 60%;
@@ -23,10 +25,11 @@
 }
 
 @theme {
-  --font-sans: Outfit Variable, sans-serif;
+  --font-sans: Hanken Grotesk Variable, sans-serif;
 
   --color-primary-darker: hsl(var(--primary-darker));
   --color-foreground: hsl(var(--foreground));
+  --color-subtle: hsl(var(--subtle));
   --color-background: hsl(var(--background));
   --color-primary: hsl(var(--primary));
   --color-secondary: #968ca8;
