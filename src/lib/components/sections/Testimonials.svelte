@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { base } from '$app/paths';
   import DualHeader from '$lib/components/common/DualHeader.svelte';
   import { fade } from 'svelte/transition';
 
@@ -34,23 +33,7 @@
   function changeQuote(direction: number) {
     index = (index + direction + testimonials.length) % testimonials.length;
   }
-
-  // Calculate the required height of the quote container to display a consistent height and avoid
-  // layout shifts when cycling through testimomials with inconsistent lengths.
-  let innerWidth = $state(0);
-  const lineHeight = $derived(innerWidth >= 1024 ? 40 : 28);
-  const averageCharsPerLine = $derived(Math.ceil(innerWidth * (innerWidth >= 1024 ? 0.05 : 0.06)));
-  const maxHeight = $derived(
-    Math.max(
-      ...testimonials.map((testimonial) => {
-        const lines = Math.ceil(testimonial.quote.length / averageCharsPerLine);
-        return lines * lineHeight;
-      }),
-    ),
-  );
 </script>
-
-<svelte:window bind:innerWidth />
 
 <section class="flex flex-col justify-center w-full py-5 sm:py-9 gap-14 xl:gap-20">
   <DualHeader title="testimonials">
@@ -59,39 +42,68 @@
     {/snippet}
   </DualHeader>
   <div
-    class="md:py-24 md:px-14 gap-6 lg:gap-20 flex flex-col justify-between md:border-y-2 border-black/[13%] dark:border-white/[13%]"
+    class="md:py-12 md:px-14 gap-6 lg:gap-20 flex flex-col justify-between md:border-y-2 border-foreground/[13%]"
   >
     {#key index}
-      <p
-        class="text-lg lg:text-3xl font-light tracking-[1.02px]"
-        style="height: {maxHeight}px;"
-      >
-        <span in:fade={{ duration: 800 }}>"{testimonials[index].quote}"</span>
+      <p class="text-lg lg:text-2xl text-foreground font-medium leading-snug tracking-wider h-52 sm:h-32 md:h-24">
+        <span in:fade={{ duration: 800 }}>{testimonials[index].quote}</span>
       </p>
     {/key}
     <div class="flex items-center justify-between h-9">
       {#key index}
-        <span in:fade={{ duration: 800 }} class="pr-8 sm:text-lg text-neutral"
+        <span in:fade={{ duration: 800 }} class="pr-4 sm:text-lg text-subtle"
           >— {#if testimonials[index].link}
-          <a
-            class="text-primary hover:opacity-80"
-            target="_blank"
-            rel="noopener noreferrer"
-            href={testimonials[index].link}
-          >
+            <a
+              class="text-primary hover:opacity-80"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={testimonials[index].link}
+            >
+              {testimonials[index].author}
+            </a>
+          {:else}
             {testimonials[index].author}
-          </a>
-        {:else}
-          {testimonials[index].author}
-        {/if}
-      </span>
+          {/if}
+        </span>
       {/key}
-      <div class="flex gap-6 lg:gap-14 min-w-fit">
-        <button onclick={() => changeQuote(-1)} class="hover:opacity-60 hover:cursor-pointer">
-          <img src="{base}/icons/left-arrow.svg" alt="left-arrow" class="size-6 lg:size-9 filter dark:invert" />
+      <div class="flex gap-4 min-w-fit">
+        <button
+          onclick={() => changeQuote(-1)}
+          class="hover:opacity-60 hover:cursor-pointer text-foreground/80"
+          aria-label="Previous testimonial"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            class="size-8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"
+            />
+          </svg>
         </button>
-        <button onclick={() => changeQuote(+1)} class="hover:opacity-60 hover:cursor-pointer">
-          <img src="{base}/icons/right-arrow.svg" alt="right-arrow" class="size-6 lg:size-9 filter dark:invert" />
+        <button
+          onclick={() => changeQuote(+1)}
+          class="hover:opacity-60 hover:cursor-pointer text-foreground/80"
+          aria-label="Next testimonial"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            class="size-8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+            />
+          </svg>
         </button>
       </div>
     </div>

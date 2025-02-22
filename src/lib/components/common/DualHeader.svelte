@@ -1,7 +1,9 @@
 <script lang="ts">
+  import type { Snippet } from 'svelte';
+
   type DualHeader = {
     title: string;
-    subtitle: any;
+    subtitle: Snippet;
   };
 
   let { title, subtitle }: DualHeader = $props();
@@ -9,11 +11,11 @@
   const id = $derived(title.toLowerCase().replace(/\s/g, '-'));
 </script>
 
-<hgroup class="flex flex-col gap-3">
-  <h2 {id} class="text-2xl xl:text-4xl tracking-[1.65px] uppercase font-medium scroll-mt-32">
-    {title}
-  </h2>
-  <div class="text-lg xl:text-3xl xl:tracking-[1.02px] xl:leading-[45px] text-neutral">
+<hgroup
+  class="my-12 mx-auto w-full flex flex-col text-center left items-center justify-center gap-4 px-4 md:max-w-[820px] scroll-mt-32 @container"
+>
+  <h2 {id} class="text-[max(6cqw,_1.875em)] font-semibold capitalize leading-none">{title}</h2>
+  <div class="text-[max(2.5cqw,_1em)] text-subtle leading-snug">
     {@render subtitle()}
   </div>
 </hgroup>
