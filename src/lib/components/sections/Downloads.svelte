@@ -19,7 +19,7 @@
           supportsQt5: true,
         },
       ],
-      MacOS: [
+      macOS: [
         {
           href: buildDownloadURL('mac-apple', 'dmg'),
           text: `Anki Apple Silicon ${anki_version}`,
@@ -109,7 +109,32 @@
           </div>
         {/each}
       </div>
-      <a href="https://github.com/ankitects/anki/releases" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 text-base font-medium md:text-xl md:px-5 text-primary hover:opacity-60">Change Notes & Older Releases <img src="{base}/icons/link-arrow.svg" alt="outlink" class="size-4" /></a>
+
+      <div>
+        <a
+          href="https://docs.ankiweb.net/getting-started.html#installing--upgrading"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-1 text-base font-medium md:text-xl md:px-5 text-primary hover:opacity-60"
+          >Installation Guide <img
+            src="{base}/icons/link-arrow.svg"
+            alt="outlink"
+            class="size-4"
+          /></a
+        >
+
+        <a
+          href="https://github.com/ankitects/anki/releases"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-1 text-base font-medium md:text-xl md:px-5 text-primary hover:opacity-60"
+          >Change Notes & Older Releases <img
+            src="{base}/icons/link-arrow.svg"
+            alt="outlink"
+            class="size-4"
+          /></a
+        >
+      </div>
     </div>
     <div
       class="xl:col-span-2 border-black/[13%] dark:border-white/[13%] md:border-2 flex flex-col md:px-14 md:py-9 gap-8 md:gap-20"
