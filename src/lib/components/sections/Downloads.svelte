@@ -84,15 +84,15 @@
       <div class="flex items-center justify-between gap-12">
         <div class="flex flex-col gap-4 w-full">
           <div class="flex justify-between items-center">
-            <h2 class="text-xl font-medium uppercase md:text-3xl">Desktop</h2>
+            <h3 class="text-xl font-medium capitalize md:text-3xl">Desktop</h3>
           </div>
-          <p class="text-base md:text-xl text-neutral">
+          <p class="leading-snug tracking-wide text-subtle">
             If you have a <a
               href="https://support.apple.com/en-au/116943"
               class="text-primary hover:opacity-80"
               target="_blank"
               rel="noopener noreferrer">recent Mac</a
-            >, pick the Apple Silicon version for better performance/battery life. Older Macs will
+            >, pick the Apple Silicon version for better performance and battery life. Older Macs will
             need to use the Intel version instead.
           </p>
         </div>
@@ -100,7 +100,7 @@
       <div class="flex flex-col md:divide-y-2 divide-y divide-black/[13%] dark:divide-white/[13%]">
         {#each Object.entries(download_options.desktop) as [key, value]}
           <div class="flex justify-between py-5 md:px-5">
-            <h2 class="text-lg font-medium md:text-2xl">{key}</h2>
+            <h4 class="text-xl tracking-wide">{key}</h4>
             <div class="flex flex-col items-end gap-3">
               {#each value as { href, text, icon }}
                 <DownloadLink {href} {text} {icon} />
@@ -140,15 +140,15 @@
       class="xl:col-span-2 border-black/[13%] dark:border-white/[13%] md:border-2 flex flex-col md:px-14 md:py-9 gap-8 md:gap-20"
     >
       <div class="flex flex-col gap-4 w-full">
-        <h2 class="text-xl font-medium uppercase md:text-3xl">Mobile</h2>
-        <p class="text-base md:text-xl text-neutral">
+        <h3 class="text-xl font-medium capitalize md:text-3xl">Mobile</h3>
+        <p class="leading-snug tracking-wide text-subtle">
           AnkiMobile is the official iOS app and all purchases help fund Anki's development.
         </p>
       </div>
       <div class="flex flex-col md:divide-y-2 divide-y divide-black/[13%] dark:divide-white/[13%]">
         {#each Object.entries(download_options.mobile) as [key, value]}
           <div class="flex justify-between py-5 md:px-5">
-            <h2 class="text-lg font-medium md:text-2xl">{key}</h2>
+            <h4 class="text-xl tracking-wide">{key}</h4>
             <div class="flex flex-col items-end gap-3">
               {#each value as { href, text, icon }}
                 <DownloadLink {href} {text} {icon} />

@@ -33,7 +33,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@fontsource-variable/outfit": "^5.1.0",
+    "@fontsource-variable/hanken-grotesk": "^5.1.1",
     "@tailwindcss/vite": "^4.0.1"
   }
 }
