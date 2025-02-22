@@ -19,7 +19,7 @@
           supportsQt5: true,
         },
       ],
-      MacOS: [
+      macOS: [
         {
           href: buildDownloadURL('mac-apple', 'dmg'),
           text: `Anki Apple Silicon ${anki_version}`,
