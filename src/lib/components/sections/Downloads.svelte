@@ -92,8 +92,8 @@
               class="text-primary hover:opacity-80"
               target="_blank"
               rel="noopener noreferrer">recent Mac</a
-            >, pick the Apple Silicon version for better performance and battery life. Older Macs will
-            need to use the Intel version instead.
+            >, pick the Apple Silicon version for better performance and battery life. Older Macs
+            will need to use the Intel version instead.
           </p>
         </div>
       </div>

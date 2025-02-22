@@ -24,9 +24,7 @@
           class="flex items-center gap-2 shrink-0 [&>*]:pointer-events-none [&>*]:select-none"
         >
           <img src="{base}/logo.svg" alt="Logo" class="size-7" />
-          <span class="font-bold text-foreground text-xl leading-none tracking-widest">
-            ANKI
-          </span>
+          <span class="font-bold text-foreground text-xl leading-none tracking-widest"> ANKI </span>
         </a>
       </div>
       <div class="flex items-center h-full max-md:hidden pr-8">

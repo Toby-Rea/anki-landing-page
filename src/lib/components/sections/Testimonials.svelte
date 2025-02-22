@@ -45,7 +45,9 @@
     class="md:py-12 md:px-14 gap-6 lg:gap-20 flex flex-col justify-between md:border-y-2 border-foreground/[13%]"
   >
     {#key index}
-      <p class="text-lg lg:text-2xl text-foreground font-medium leading-snug tracking-wider h-52 sm:h-32 md:h-24">
+      <p
+        class="text-lg lg:text-2xl text-foreground font-medium leading-snug tracking-wider h-52 sm:h-32 md:h-24"
+      >
         <span in:fade={{ duration: 800 }}>{testimonials[index].quote}</span>
       </p>
     {/key}
