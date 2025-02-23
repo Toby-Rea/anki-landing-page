@@ -72,7 +72,7 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          installation guides
+          installation guide
         </a>.
       </p>
     {/snippet}
