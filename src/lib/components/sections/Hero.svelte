@@ -8,8 +8,8 @@
       Remembering is easier with <span class="text-primary">Anki</span>
     </h1>
     <p class="text-subtle leading-snug text-[max(3cqw,_1em)] mt-[max(4cqw,_1em)]">
-      Anki adapts to your learning pace so you spend more time on challenging material and less on
-      what you already know.
+      Anki is a flashcard program that helps you spend more time on challenging material, and less
+      on what you already know.
     </p>
     <div
       class="grid grid-cols-2 w-full min-w-[60cqw] max-w-xl h-[max(9cqw,_3em)] mt-[max(6cqw,_1.25em)]"
