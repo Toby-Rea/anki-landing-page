@@ -25,7 +25,9 @@
     {/snippet}
   </DualHeader>
   <div>
-    <div class="w-full grid grid-cols-1 md:grid-cols-12 border-t border-foreground/[13%] py-[max(3.5dvw,_2em)]">
+    <div
+      class="w-full grid grid-cols-1 md:grid-cols-12 border-t border-foreground/[13%] py-[max(3.5dvw,_2em)]"
+    >
       <div class="col-span-1 md:col-span-5 mb-6 md:mb-0 md:pr-8">
         <h3 class="text-2xl font-medium capitalize md:text-3xl">Desktop</h3>
         <p class="mt-4 leading-snug text-subtle">
@@ -109,7 +111,9 @@
           </div>
         </div>
       </div>
-      <div class="col-span-1 md:col-span-12 flex flex-col md:flex-row md:items-center md:justify-center md:gap-8 mt-[max(3dvw,_2em)]">
+      <div
+        class="col-span-1 md:col-span-12 flex flex-col md:flex-row md:items-center md:justify-center md:gap-8 mt-[max(3dvw,_2em)]"
+      >
         <a
           href="https://docs.ankiweb.net/getting-started.html#installing--upgrading"
           target="_blank"
@@ -156,7 +160,9 @@
         </a>
       </div>
     </div>
-    <div class="w-full grid grid-cols-1 md:grid-cols-12 border-t border-foreground/[13%] py-[max(3.5dvw,_2em)]">
+    <div
+      class="w-full grid grid-cols-1 md:grid-cols-12 border-t border-foreground/[13%] py-[max(3.5dvw,_2em)]"
+    >
       <div class="col-span-1 md:col-span-5 mb-6 md:mb-0 md:pr-8">
         <h3 class="text-2xl font-medium capitalize md:text-3xl">Mobile</h3>
         <p class="mt-4 leading-snug text-subtle">
