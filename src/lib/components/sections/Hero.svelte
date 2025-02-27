@@ -4,12 +4,15 @@
 
 <section class="flex items-center justify-between min-w-full @container">
   <div class="grid size-full max-w-3xl @container py-[10cqw]">
+    <h2 class="text-subtle tracking-widest text-sm font-bold mb-[max(2cqw,_0.5em)]">
+      POWERFUL, INTELLIGENT FLASHCARDS.
+    </h2>
     <h1 class="font-bold leading-none tracking-tight text-[max(11cqw,_2.5em)]">
       Remembering is easier with <span class="text-primary">Anki</span>
     </h1>
     <p class="text-subtle leading-snug text-[max(3cqw,_1em)] mt-[max(4cqw,_1em)]">
-      Anki adapts to your learning pace so you spend more time on challenging material and less on
-      what you already know.
+      Anki is a flashcard program that helps you spend more time on challenging material, and less
+      on what you already know.
     </p>
     <div
       class="grid grid-cols-2 w-full min-w-[60cqw] max-w-xl h-[max(9cqw,_3em)] mt-[max(6cqw,_1.25em)]"
