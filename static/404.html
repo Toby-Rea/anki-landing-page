@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found</title>
+    <script>
+      // Get the current path
+      const path = window.location.pathname;
+      // If this isn't the 404.html page itself, redirect to home
+      if (path !== '/404.html') {
+        window.location.href = '/';
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Page Not Found</h1>
+    <p>Redirecting to homepage...</p>
+  </body>
+</html>
