@@ -7,6 +7,7 @@
     --background: 0, 0%, 97%;
     --primary: 205, 67%, 40%;
     --primary-darker: 208, 65%, 50%;
+    scrollbar-color: rgb(98, 165, 222) rgb(247 247 247);
   }
 
   @media (prefers-color-scheme: dark) {
@@ -16,6 +17,7 @@
       --background: 0, 0%, 3%;
       --primary: 205, 67%, 70%;
       --primary-darker: 208, 65%, 60%;
+      scroll-behavior: smooth; scrollbar-color: rgb(98, 165, 222) rgb(8, 8, 8);
     }
   }
 
@@ -39,5 +41,4 @@
 
 html {
   scroll-behavior: smooth;
-  scrollbar-color: rgb(98, 165, 222) rgb(8, 8, 8);
 }
