@@ -39,4 +39,5 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-color: rgb(98, 165, 222) rgb(8, 8, 8);
 }
