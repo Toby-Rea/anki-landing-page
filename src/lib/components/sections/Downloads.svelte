@@ -2,6 +2,7 @@
   import DualHeader from '$lib/components/common/DualHeader.svelte';
 
   const anki_version: string = '25.02';
+  const minimum_macos_version: string = '12';
 
   function buildDownloadURL(platform: string, extension: string): string {
     return `https://github.com/ankitects/anki/releases/download/${anki_version}/anki-${anki_version}-${platform}-qt6.${extension}`;
@@ -63,7 +64,7 @@
           </div>
         </div>
         <div class="flex justify-between py-3 md:px-5">
-          <h4 class="font-medium text-xl">macOS</h4>
+          <h4 class="font-medium text-xl">macOS {minimum_macos_version}+</h4>
           <div class="flex flex-col items-end gap-3">
             <a
               href={buildDownloadURL('mac-apple', 'dmg')}
