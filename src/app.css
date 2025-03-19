@@ -18,8 +18,8 @@
       --background: 0, 0%, 3%;
       --primary: 205, 67%, 70%;
       --primary-darker: 208, 65%, 60%;
-    --scrollbar-thumb: hsl(var(--primary));
-    --scrollbar-track: hsl(var(--background));
+      --scrollbar-thumb: hsl(var(--primary));
+      --scrollbar-track: hsl(var(--background));
     }
   }
 
