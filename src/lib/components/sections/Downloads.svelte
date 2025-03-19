@@ -1,10 +1,13 @@
 <script lang="ts">
   import DualHeader from '$lib/components/common/DualHeader.svelte';
 
-  const anki_version: string = '25.02';
+  const ankiVersion = '25.02';
+  const winMinVer = '10';
+  const macosMinVer = '12';
+  const linuxMinYear = '2023';
 
   function buildDownloadURL(platform: string, extension: string): string {
-    return `https://github.com/ankitects/anki/releases/download/${anki_version}/anki-${anki_version}-${platform}-qt6.${extension}`;
+    return `https://github.com/ankitects/anki/releases/download/${ankiVersion}/anki-${ankiVersion}-${platform}-qt6.${extension}`;
   }
 </script>
 
@@ -44,7 +47,7 @@
       </div>
       <div class="col-span-1 md:col-span-7 grid divide-y divide-foreground/[13%]">
         <div class="flex justify-between py-3 md:px-5">
-          <h4 class="font-medium text-xl">Windows</h4>
+          <h4 class="font-medium text-xl">Windows {winMinVer}+</h4>
           <div class="flex flex-col items-end gap-3">
             <a
               href={buildDownloadURL('windows', 'exe')}
@@ -58,12 +61,12 @@
                   clip-rule="evenodd"
                 />
               </svg>
-              <span>Anki {anki_version}</span>
+              <span>Anki {ankiVersion}</span>
             </a>
           </div>
         </div>
         <div class="flex justify-between py-3 md:px-5">
-          <h4 class="font-medium text-xl">macOS</h4>
+          <h4 class="font-medium text-xl">macOS {macosMinVer}+</h4>
           <div class="flex flex-col items-end gap-3">
             <a
               href={buildDownloadURL('mac-apple', 'dmg')}
@@ -75,7 +78,7 @@
                   d="M17.537 12.625a4.42 4.42 0 0 0 2.684 4.047a11 11 0 0 1-1.384 2.845c-.834 1.218-1.7 2.432-3.062 2.457c-1.34.025-1.77-.794-3.3-.794c-1.531 0-2.01.769-3.275.82c-1.316.049-2.317-1.318-3.158-2.532c-1.72-2.484-3.032-7.017-1.27-10.077A4.9 4.9 0 0 1 8.91 6.884c1.292-.025 2.51.869 3.3.869c.789 0 2.27-1.075 3.828-.917a4.67 4.67 0 0 1 3.66 1.984a4.52 4.52 0 0 0-2.16 3.805m-2.52-7.432A4.4 4.4 0 0 0 16.06 2a4.48 4.48 0 0 0-2.945 1.516a4.18 4.18 0 0 0-1.061 3.093a3.7 3.7 0 0 0 2.967-1.416Z"
                 />
               </svg>
-              <span>Anki Apple Silicon {anki_version}</span>
+              <span>Anki Apple Silicon {ankiVersion}</span>
             </a>
             <a
               href={buildDownloadURL('mac-intel', 'dmg')}
@@ -87,12 +90,12 @@
                   d="M17.537 12.625a4.42 4.42 0 0 0 2.684 4.047a11 11 0 0 1-1.384 2.845c-.834 1.218-1.7 2.432-3.062 2.457c-1.34.025-1.77-.794-3.3-.794c-1.531 0-2.01.769-3.275.82c-1.316.049-2.317-1.318-3.158-2.532c-1.72-2.484-3.032-7.017-1.27-10.077A4.9 4.9 0 0 1 8.91 6.884c1.292-.025 2.51.869 3.3.869c.789 0 2.27-1.075 3.828-.917a4.67 4.67 0 0 1 3.66 1.984a4.52 4.52 0 0 0-2.16 3.805m-2.52-7.432A4.4 4.4 0 0 0 16.06 2a4.48 4.48 0 0 0-2.945 1.516a4.18 4.18 0 0 0-1.061 3.093a3.7 3.7 0 0 0 2.967-1.416Z"
                 />
               </svg>
-              <span>Anki Apple Intel {anki_version}</span>
+              <span>Anki Apple Intel {ankiVersion}</span>
             </a>
           </div>
         </div>
         <div class="flex justify-between py-3 md:px-5">
-          <h4 class="font-medium text-xl">Linux</h4>
+          <h4 class="font-medium text-xl">Linux {linuxMinYear}+</h4>
           <div class="flex flex-col items-end gap-3">
             <a
               href={buildDownloadURL('linux', 'tar.zst')}
@@ -106,7 +109,7 @@
                   clip-rule="evenodd"
                 />
               </svg>
-              <span>Anki {anki_version}</span>
+              <span>Anki {ankiVersion}</span>
             </a>
           </div>
         </div>
