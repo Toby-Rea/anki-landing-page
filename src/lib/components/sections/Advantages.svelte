@@ -45,7 +45,7 @@
     {/snippet}
   </DualHeader>
   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16">
-    {#each advantages as { title, description, icon }, i}
+    {#each advantages as { title, description, icon }, _i}
       <AdvantageCard {title} {description} {icon} />
     {/each}
   </div>
