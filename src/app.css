@@ -7,7 +7,8 @@
     --background: 0, 0%, 97%;
     --primary: 205, 67%, 40%;
     --primary-darker: 208, 65%, 50%;
-    scrollbar-color: rgb(98, 165, 222) rgb(247 247 247);
+    --scrollbar-thumb: hsl(var(--primary));
+    --scrollbar-track: hsl(var(--background));
   }
 
   @media (prefers-color-scheme: dark) {
@@ -17,7 +18,8 @@
       --background: 0, 0%, 3%;
       --primary: 205, 67%, 70%;
       --primary-darker: 208, 65%, 60%;
-      scrollbar-color: rgb(98, 165, 222) rgb(8, 8, 8);
+    --scrollbar-thumb: hsl(var(--primary));
+    --scrollbar-track: hsl(var(--background));
     }
   }
 
@@ -41,4 +43,5 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
