@@ -1,8 +1,10 @@
 <script lang="ts">
   import DualHeader from '$lib/components/common/DualHeader.svelte';
 
-  const ankiVersion: string = '25.02';
-  const macosMinVer: string = '12';
+  const ankiVersion = '25.02';
+  const winMinVer = '10';
+  const macosMinVer = '12';
+  const linuxMinYear = '2023';
 
   function buildDownloadURL(platform: string, extension: string): string {
     return `https://github.com/ankitects/anki/releases/download/${ankiVersion}/anki-${ankiVersion}-${platform}-qt6.${extension}`;
@@ -45,7 +47,7 @@
       </div>
       <div class="col-span-1 md:col-span-7 grid divide-y divide-foreground/[13%]">
         <div class="flex justify-between py-3 md:px-5">
-          <h4 class="font-medium text-xl">Windows</h4>
+          <h4 class="font-medium text-xl">Windows {winMinVer}+</h4>
           <div class="flex flex-col items-end gap-3">
             <a
               href={buildDownloadURL('windows', 'exe')}
@@ -93,7 +95,7 @@
           </div>
         </div>
         <div class="flex justify-between py-3 md:px-5">
-          <h4 class="font-medium text-xl">Linux</h4>
+          <h4 class="font-medium text-xl">Linux {linuxMinYear}+</h4>
           <div class="flex flex-col items-end gap-3">
             <a
               href={buildDownloadURL('linux', 'tar.zst')}
