@@ -1,5 +1,6 @@
 <script lang="ts">
   import DualHeader from '$lib/components/common/DualHeader.svelte';
+  import { cubicIn } from 'svelte/easing';
   import { fade } from 'svelte/transition';
 
   type Testimonial = {
@@ -30,10 +31,32 @@
     },
   ];
 
-  function changeQuote(direction: number) {
-    index = (index + direction + testimonials.length) % testimonials.length;
-  }
+  const changeTestimonial = (direction: 'next' | 'prev') => {
+    index = {
+      next: (index + 1) % testimonials.length,
+      prev: (index - 1 + testimonials.length) % testimonials.length,
+    }[direction];
+  };
 </script>
+
+{#snippet testimonialAuthor(testimonial: Testimonial)}
+  {testimonial.author}
+  {#if testimonial.link}
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      class="size-4 lg:size-5 stroke-3 inline ml-1"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+      />
+    </svg>
+  {/if}
+{/snippet}
 
 <section class="flex flex-col justify-center w-full py-5 sm:py-9 gap-14 xl:gap-20">
   <DualHeader title="testimonials">
@@ -41,72 +64,92 @@
       <p>See what people are saying about Anki.</p>
     {/snippet}
   </DualHeader>
-  <div
-    class="md:py-12 md:px-14 gap-6 lg:gap-20 flex flex-col justify-between md:border-y-2 border-foreground/[13%]"
-  >
-    {#key index}
-      <p
-        class="text-lg lg:text-2xl text-foreground font-medium leading-snug tracking-wider h-52 sm:h-32 md:h-24"
+  <div>
+    <div
+      class="relative flex flex-col w-full min-h-96 dark:bg-primary rounded-lg p-8 lg:px-16 lg:py-12 shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
+    >
+      <div
+        class="absolute top-8 right-8 lg:top-12 lg:right-16 flex justify-end gap-4 dark:text-background"
       >
-        <span in:fade={{ duration: 800 }}>{testimonials[index].quote}</span>
-      </p>
-    {/key}
-    <div class="flex items-center justify-between h-9">
-      {#key index}
-        <span in:fade={{ duration: 800 }} class="pr-4 sm:text-lg text-subtle"
-          >— {#if testimonials[index].link}
-            <a
-              class="text-primary hover:opacity-80"
-              target="_blank"
-              rel="noopener noreferrer"
-              href={testimonials[index].link}
-            >
-              {testimonials[index].author}
-            </a>
-          {:else}
-            {testimonials[index].author}
-          {/if}
-        </span>
-      {/key}
-      <div class="flex gap-4 min-w-fit">
         <button
-          onclick={() => changeQuote(-1)}
-          class="hover:opacity-60 hover:cursor-pointer text-foreground/80"
+          onclick={() => changeTestimonial('prev')}
           aria-label="Previous testimonial"
+          class="hover:opacity-40 hover:cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
-            class="size-8"
+            class="size-6 lg:size-7 stroke-2"
           >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
-              d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"
+              d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
             />
           </svg>
         </button>
         <button
-          onclick={() => changeQuote(+1)}
-          class="hover:opacity-60 hover:cursor-pointer text-foreground/80"
+          onclick={() => changeTestimonial('next')}
           aria-label="Next testimonial"
+          class="hover:opacity-40 hover:cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
-            class="size-8"
+            class="size-6 lg:size-7 stroke-2"
           >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
-              d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
             />
           </svg>
         </button>
+      </div>
+      <div class="grid grid-cols-8 lg:grid-cols-7 gap-10 grow">
+        {#key index}
+          <div
+            class="col-span-5 lg:col-span-4 flex h-fit"
+            in:fade={{ duration: 350, easing: cubicIn }}
+          >
+            <div class="min-w-fit dark:text-background font-bold text-md lg:text-2xl mt-auto">
+              {#if testimonials[index].link}
+                <a
+                  href={testimonials[index].link}
+                  class="hover:opacity-60 transition-all duration-200 ease-in-out"
+                >
+                  {@render testimonialAuthor(testimonials[index])}
+                </a>
+              {:else}
+                <span>
+                  {@render testimonialAuthor(testimonials[index])}
+                </span>
+              {/if}
+            </div>
+          </div>
+          <div
+            class="col-span-8 flex flex-col justify-center gap-2 lg:gap-6"
+            in:fade={{ duration: 350, easing: cubicIn }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="size-8 lg:size-12 dark:text-background"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621c.537-.278 1.24-.375 1.929-.311c1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5a3.87 3.87 0 0 1-2.748-1.179m10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621c.537-.278 1.24-.375 1.929-.311c1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5a3.87 3.87 0 0 1-2.748-1.179"
+              />
+            </svg>
+            <span class="dark:text-background font-medium text-lg lg:text-3xl h-fit">
+              {testimonials[index].quote}
+            </span>
+          </div>
+        {/key}
       </div>
     </div>
   </div>
