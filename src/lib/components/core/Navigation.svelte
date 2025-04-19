@@ -10,6 +10,8 @@
     { text: 'Docs', href: 'https://docs.ankiweb.net/' },
     { text: 'Forums', href: 'https://forums.ankiweb.net/' },
     { text: 'AnkiWeb', href: 'https://ankiweb.net/' },
+    { text: 'Add-ons', href: 'https://ankiweb.net/shared/addons' },
+    { text: 'Shared Decks', href: 'https://ankiweb.net/shared/decks' },
   ];
 </script>
 
@@ -31,6 +33,8 @@
         {#each options as { text, href }}
           <a
             class="px-3 select-none transition-all duration-150 ease-out flex items-center text-foreground h-full hover:shadow-[inset_0_-2px_var(--color-primary)]"
+            target="_blank"
+            rel="noopener noreferrer"
             {href}
           >
             {text}
@@ -39,6 +43,8 @@
         <a
           aria-label="GitHub repository"
           href="https://github.com/ankitects/anki"
+          target="_blank"
+          rel="noopener noreferrer"
           class="px-3 py-2 group"
         >
           <svg viewBox="0 0 20 20" class="size-5 fill-foreground group-hover:fill-primary">
