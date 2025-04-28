@@ -10,7 +10,7 @@
     { text: 'Docs', href: 'https://docs.ankiweb.net/' },
     { text: 'Forums', href: 'https://forums.ankiweb.net/' },
     { text: 'AnkiWeb', href: 'https://ankiweb.net/' },
-    { text: 'Add-ons', href: 'https://ankiweb.net/shared/addons' },
+    { text: 'Add-Ons', href: 'https://ankiweb.net/shared/addons' },
     { text: 'Shared Decks', href: 'https://ankiweb.net/shared/decks' },
   ];
 </script>
