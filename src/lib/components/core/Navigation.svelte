@@ -29,7 +29,7 @@
           <span class="font-bold text-foreground text-xl leading-none tracking-widest"> Anki </span>
         </a>
       </div>
-      <div class="flex items-center h-full max-md:hidden pr-8">
+      <div class="flex items-center h-full max-[832px]:hidden pr-8">
         {#each options as { text, href }}
           <a
             class="px-3 select-none transition-all duration-150 ease-out flex items-center text-foreground h-full hover:shadow-[inset_0_-2px_var(--color-primary)]"
@@ -61,7 +61,7 @@
           Download Anki
         </a>
       </div>
-      <div class="flex items-center gap-2.5 md:hidden">
+      <div class="flex items-center gap-2.5 min-[832px]:hidden">
         <button
           type="button"
           class="relative inline-grid size-7 place-items-center rounded-md text-foreground"
