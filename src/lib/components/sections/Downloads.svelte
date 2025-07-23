@@ -34,15 +34,7 @@
       <div class="col-span-1 md:col-span-5 mb-6 md:mb-0 md:pr-8">
         <h3 class="text-2xl font-medium capitalize md:text-3xl">Desktop</h3>
         <p class="mt-4 leading-snug text-subtle">
-          If you have a <a
-            href="https://support.apple.com/en-au/116943"
-            class="text-primary hover:opacity-80"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            recent Mac
-          </a>, pick the Apple Silicon version for better performance and battery life. Older Macs
-          will need to use the Intel version instead.
+          The free computer version is available for all major platforms.
         </p>
       </div>
       <div class="col-span-1 md:col-span-7 grid divide-y divide-foreground/[13%]">
