@@ -1,7 +1,7 @@
 <script lang="ts">
   import DualHeader from '$lib/components/common/DualHeader.svelte';
 
-  const ankiVersion = '25.07.3';
+  const ankiVersion = '25.07.4';
   const winMinVer = '10';
   const macosMinVer = '12';
   const linuxMinYear = '2023';
